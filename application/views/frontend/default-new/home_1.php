@@ -3,14 +3,20 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
-                <div class="h-1-banner-text mb-3" >
+                <div class="h-1-banner-text mb-3" style="color:#fff;">
                     <?php
                         $banner_title = site_phrase(get_frontend_settings('banner_title'));
                         $banner_title_arr = explode(' ', $banner_title);
                     ?>
                     <h1 style="color:#003666">
                         <?php
-                      
+                        foreach($banner_title_arr as $key => $value){
+                            if($key == count($banner_title_arr) - 1){
+                                $value ;
+                            }else{
+                                echo $value.' ';
+                            }
+                        }
 
                       echo   site_phrase(get_frontend_settings('start_learning_from_best_platform'));
                         ?>

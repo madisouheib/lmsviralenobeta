@@ -53,10 +53,11 @@
 <div class="row">
     
 
- <div class="col-lg-8">
-<h2> من نحن </h2>        
-
-<p style="font-size:14px;">
+ <div class="col-lg-12 col-12">
+<h1 class="text-center" style="color:#524646;"> ؟ من نحن </h1>        
+</div>
+ <div class="col-lg-12 col-12">
+<p style="font-size:18px;font-weight: 500; text-align:center;">
 
 "المركز الوطني لتدريب البحري هو منصة تعليمية رائدة تهدف إلى توفير التدريب والتعليم في مجال البحرية والقوارب. تم تصميم المنصة لتزويد الأفراد بفرصة فريدة لاكتساب المعرفة والمهارات اللازمة لقيادة وإدارة القوارب بفعالية وبأمان.
 
@@ -64,10 +65,10 @@
 
 سواء كنت مبتدئًا يبحث عن تعلم أساسيات القوارب أو محترفًا يسعى لتحسين مهاراته، فإن المركز الوطني لتدريب البحري توفر لك الأدوات والموارد لتحقيق أهدافك في عالم البحرية والقوارب. نحن نلتزم بتقديم تعليم عالي الجودة وتطوير مهاراتك البحرية لضمان تجربة تعليمية مميزة." </p>
     </div>
- <div class="col-lg-4">
+ <div class="col-lg-12 col-12">
         <div class="card">
             
-            <img src="<?php echo base_url('uploads/images/aboutus.jpg'); ?>">
+            <img style="display: block; margin: auto;" src="<?php echo base_url('uploads/images/aboutus.jpg'); ?>">
             
         </div>
 

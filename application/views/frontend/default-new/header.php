@@ -7,7 +7,7 @@
 <header>
   <!-- Sub Header Start -->
   <div class="sub-header py-0"  style="<?php echo $page_name === 'home' ? 'background: transparent !important;color:#003666;' : ''; ?>">
-    <div class="container-fluid" >
+    <div class="container" >
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <div class="icon icon-left">
@@ -19,10 +19,12 @@
               <li class="nav-item px-2">
                 <a style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?>" href="mailto:<?php echo get_settings('system_email'); ?>"><i class="fas fa-envelope"></i> <?php echo get_settings('system_email'); ?></a>
               </li>
+
+
             </ul>
           </div>
         </div>
-
+    
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <div class="icon right-icon" style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?>">
             <?php $facebook = get_frontend_settings('facebook'); ?>
@@ -60,6 +62,30 @@
                     <?php endforeach; ?>
                   </select>
                 </form>
+              </li>
+              <li>
+             <div class="wisth_tgl_div">
+          <div class="wisth_tgl_2div">
+            <a class="menu_pro_cart_tgl mt-1"
+              ><i class="fa-solid fa-cart-shopping" style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?>"></i>
+
+              <?php if(count($cart_items) > 0): ?>
+                <p class="menu_number" id="cartItemsCounter"><?php echo count($cart_items); ?></p>
+              <?php endif; ?>
+            </a>
+            <div class="menu_pro_wish">
+              <div class="overflow-control" id="cartItems">
+
+                <?php include "cart_items.php"; ?>
+
+              </div>
+              <div class="menu_pro_btn">
+                <a href="<?php echo site_url('home/shopping_cart'); ?>" type="submit" class="btn btn-primary text-white"><?php echo get_phrase('Checkout'); ?></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
               </li>
             </ul>
           </div>

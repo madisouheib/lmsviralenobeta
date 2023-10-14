@@ -5,7 +5,7 @@
 <style>
   .menubar .right-menubar  a{ 
 
-color:#003666 !important;
+
   }
 
   
@@ -19,12 +19,7 @@ color:#003666 !important;
 <style>
 .menubar .right-menubar  a:hover{
 
-  border-radius: 5px;
 
-background-color: #fff;
-    font-weight: 400;
-  color: #0033a1;
-  padding:5px;
   
 }
 </style>
@@ -33,9 +28,9 @@ background-color: #fff;
 
 } ?>
 <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid" style="margin-right: 5%;">
+  <div class="container" style="background-color: #f7faff; border-radius: 20px;" >
     <a class="navbar-brand logo" href="<?php echo site_url(); ?>">
-      <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" style="height: 60px;" alt="" />
+      <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" style="height: 90px;" alt="" />
     </a>
     <!-- Mobile Offcanves  Icon Show -->
     <ul class="menu-offcanves">
@@ -51,12 +46,47 @@ background-color: #fff;
     </ul>
 
     <div class="navbar-collapse" id="navbarSupportedContent">
-      <!-- Small Device Hide -->
+ 
+
+
+      <div class="right-menubar " style="margin-right:5%;">
+          
+            <nav id="mobile-menu" style="    margin: auto;
+" >
+                              <ul class="navbar-nav main-nav-wrap">
+                                 <li class="nav-item">
+                                    <a class="custom-link"  href="#" style="" >من نحن</a>
+                                   
+                                 </li>
+                                 
+                               
+                                 
+                                 <li>
+                                    <a class="custom-link" href="#" style="">الأخبار</a>
+                                
+                                 </li>
+                                 
+                                 <li >
+                                    <a class="custom-link" href="#" style="" >التسوق</a>
+                                   
+                                 </li>
+                                 
+                                 <li >
+                                    <a class="custom-link" href="#" style="">الاعتمادات</a>
+                                
+                                 </li>
+                                 
+                                 <li>
+                                     <a class="custom-link" href="#" style="" >تواصل معنا</a>
+                                 </li>
+                              </ul>
+                           </nav>
+     <!-- Small Device Hide -->
       <ul class="navbar-nav main-nav-wrap mb-2 mb-lg-0 align-items-center">
         <li class="nav-item">
           <a class="nav-link header-dropdown px-3 text-nowrap" href="#" id="navbarDropdown1">
-            <img src="<?php echo site_url('assets/frontend/default-new/') ?>image/menu.png" />
-            <span style="<?php echo $page_name === 'home' ? 'color:#003666;font-weight: bold;font-size: 18px;' : ''; ?>" class="ms-2"><?php echo get_phrase('Courses'); ?></span>
+   <i class="fas fa-list" style=" vertical-align: middle;"></i>
+            <span style="<?php echo $page_name === 'home' ? 'color:#003666;font-weight: bold;font-size: 18px;' : ''; ?>" class="ms-2"> الدورات</span>
           </a>
           <ul class="navbarHover">
             <?php
@@ -64,9 +94,10 @@ background-color: #fff;
             foreach ($categories as $key => $category):?>
               <li class="dropdown-submenu">
                 <a href="<?php echo site_url('home/courses?category='.slugify($category['slug'])) ?>">
+                   <span class="has-sub-category "><i class="fa-solid fa-angle-right"></i></span>
                   <span class="icons"><i class="<?php echo $category['font_awesome_class']; ?>"></i></span>
                   <span class="text-cat"><?php echo $category['name']; ?></span>
-                  <span class="has-sub-category ms-auto"><i class="fa-solid fa-angle-right"></i></span>
+                
                 </a>
                 <ul class="sub-category-menu">
                   <?php
@@ -142,43 +173,6 @@ background-color: #fff;
         </ul>
       <?php endif; ?>
 
-
-
-      <div class="right-menubar " style="margin-right:10%;">
-          
-            <nav id="mobile-menu" >
-                              <ul class="navbar-nav main-nav-wrap">
-                                 <li class="nav-item">
-                                    <a class="custom-link"  href="#" style="" >من نحن</a>
-                                   
-                                 </li>
-                                 
-                                 <li>
-                                    <a  class="custom-link" href="#" style="" >الرؤية و الرسالة</a>
-                                
-                                 </li>
-                                 
-                                 <li>
-                                    <a class="custom-link" href="#" style="">الأخبار</a>
-                                
-                                 </li>
-                                 
-                                 <li >
-                                    <a class="custom-link" href="#" style="" >التسوق</a>
-                                   
-                                 </li>
-                                 
-                                 <li >
-                                    <a class="custom-link" href="#" style="">الاعتمادات</a>
-                                
-                                 </li>
-                                 
-                                 <li>
-                                     <a class="custom-link" href="#" style="" >تواصل معنا</a>
-                                 </li>
-                              </ul>
-                           </nav>
-
         <?php if($user_login): ?>
           <li><a class="dropdown-item" style="<?php echo $page_name === 'home' ? 'color:#003666;font-weight: bold;font-size: 18px;' : ''; ?>" href="<?php echo site_url('home/my_courses') ?>"><?php echo site_phrase('My Course') ?></a></li>
         <?php elseif($admin_login): ?>
@@ -187,27 +181,12 @@ background-color: #fff;
 
 
         <!-- Cart List Area -->
-        <div class="wisth_tgl_div">
-          <div class="wisth_tgl_2div">
-            <a class="menu_pro_cart_tgl mt-1"
-              ><i class="fa-solid fa-cart-shopping" style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?>"></i>
+       
 
-              <?php if(count($cart_items) > 0): ?>
-                <p class="menu_number" id="cartItemsCounter"><?php echo count($cart_items); ?></p>
-              <?php endif; ?>
-            </a>
-            <div class="menu_pro_wish">
-              <div class="overflow-control" id="cartItems">
-
-                <?php include "cart_items.php"; ?>
-
-              </div>
-              <div class="menu_pro_btn">
-                <a href="<?php echo site_url('home/shopping_cart'); ?>" type="submit" class="btn btn-primary text-white"><?php echo get_phrase('Checkout'); ?></a>
-              </div>
-            </div>
-          </div>
-        </div>
+                    <?php if(!$user_id): ?>
+          <a href="<?php echo site_url('login'); ?>" style=" border: 2px solid #00aeff ; color:#00aeff; border-radius:10px;font-weight:300;font-size: 16px;margin-top:5px; padding:5px;" class="mx-3"> تسجيل الدخول </a>
+          <a href="<?php echo site_url('sign_up'); ?>" style="border: 2px solid #00aeff ; color:#00aeff; border-radius:10px;font-weight:300;font-size: 16px;margin-top:5px; padding:5px;" class="mx-3 text-capitalize"> <?php echo get_phrase('Join Now'); ?></a>
+        <?php endif; ?>
 
         <?php if($user_login): ?>
           <!-- Wish List Area -->
@@ -242,10 +221,7 @@ background-color: #fff;
         <?php endif; ?>
 
 
-        <?php if(!$user_id): ?>
-          <a href="<?php echo site_url('login'); ?>" style="<?php echo $page_name === 'home' ? ';color:#003666;' : ''; ?>" class="mx-3"> <?php echo get_phrase('Login'); ?></a>
-          <a href="<?php echo site_url('sign_up'); ?>" style="<?php echo $page_name === 'home' ? ';color:#003666;' : ''; ?>" class="mx-3 text-capitalize"> <?php echo get_phrase('Join Now'); ?></a>
-        <?php endif; ?>
+
 
           <?php if($user_login || $admin_login): ?>
             <!-- Profile Area -->

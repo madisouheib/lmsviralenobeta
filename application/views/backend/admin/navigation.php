@@ -462,14 +462,14 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 			</li>
 		<?php endif; ?>
 
-		<?php if (has_permission('addon')) : ?>
+		<?php /* if (has_permission('addon')) : ?>
 			<li class="side-nav-item">
 				<a href="<?php echo site_url('admin/addon'); ?>" class="side-nav-link <?php if ($page_name == 'addons' || $page_name == 'addon_add' || $page_name == 'available_addons') : ?> active <?php endif; ?>">
 					<i class="dripicons-graph-pie"></i>
 					<span><?php echo get_phrase('addons'); ?></span>
 				</a>
 			</li>
-		<?php endif; ?>
+		<?php endif; */ ?>
 
 		<?php /* if (has_permission('theme')) : ?>
 			<li class="side-nav-item">
@@ -544,10 +544,10 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 					<li class="<?php if ($page_name == 'data_center') echo 'active'; ?>">
 						<a href="<?php echo site_url('admin/data_center'); ?>"><?php echo get_phrase('data_center'); ?></a>
 					</li>
-
+<?php /*
 					<li class="<?php if ($page_name == 'about') echo 'active'; ?>">
 						<a href="<?php echo site_url('admin/about'); ?>"><?php echo get_phrase('about'); ?></a>
-					</li>
+					</li> <?php  */ ?>
 				</ul>
 			</li>
 		<?php endif; ?>

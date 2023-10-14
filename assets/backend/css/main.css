@@ -509,15 +509,19 @@ body {
     margin-right:20%;
 
 }
+.left-side-menu .side-nav-light {
+
+  margin:0px;
+}
 .side-nav-second-level a {
     
     
-    color:#f3f4f7 !important;
+    color:#484444 !important;
 }
 .metismenu .side-nav-item   a:hover {
 
   background-color: #484444  !important;
-  color:#fff;
+  color:#fff  !important;
   transition: 0.3;
 }
 a,h1,h2,h3,h4,h5,h6 ,p,li ,button, th ,td,label,span {

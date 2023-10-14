@@ -45,14 +45,7 @@
         </div>
         <div class="lattest-news">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <h1><?php echo get_phrase('Subscribe to our Newsletter'); ?></h1>
-                    <form class="ajaxForm resetable" action="<?php echo site_url('home/subscribe_to_our_newsletter'); ?>" method="post">
-                        <input type="email" class="form-control" id="subscribe_email" placeholder="<?php echo get_phrase('Enter your email address'); ?>" name="email">
-                        <button class="form-arrow" type="submit"><i class="fa-solid fa-arrow-right-long"></i></button>
-                    </form>
-                </div>
-                
+             
                 <div class="col-lg-8 col-md-6  col-sm-12 col-12">
                     <div class="icon right-icon">
                         <ul class="nav justify-content-end">

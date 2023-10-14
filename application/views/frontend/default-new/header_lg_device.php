@@ -33,9 +33,9 @@ background-color: #fff;
 
 } ?>
 <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
+  <div class="container-fluid" style="margin-right: 5%;">
     <a class="navbar-brand logo" href="<?php echo site_url(); ?>">
-      <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" alt="" />
+      <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" style="height: 60px;" alt="" />
     </a>
     <!-- Mobile Offcanves  Icon Show -->
     <ul class="menu-offcanves">

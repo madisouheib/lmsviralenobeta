@@ -7,7 +7,7 @@
 <header>
   <!-- Sub Header Start -->
   <div class="sub-header py-0"  style="<?php echo $page_name === 'home' ? 'background: transparent !important;color:#003666;' : ''; ?>">
-    <div class="container">
+    <div class="container-fluid" >
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <div class="icon icon-left">

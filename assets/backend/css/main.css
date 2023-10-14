@@ -466,8 +466,9 @@ background-color: #f2f6ff;
 .navbar-custom {
     padding:10px;
 background-color: #537895;
-
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%)!important;
 }
+
 .leftbar-user {
 background-color: #045de9;
 background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
@@ -529,6 +530,10 @@ a,h1,h2,h3,h4,h5,h6 ,p,li ,button, th ,td,label,span {
 
     font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
 
+}
+input::placeholder {
+    font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
+  
 }
 .select2-selection__rendered {
     text-align:right !important ;

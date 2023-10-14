@@ -54,7 +54,7 @@
     
 
  <div class="col-lg-12 col-12">
-<h1 class="text-center" style="color:#524646;"> ؟ من نحن </h1>        
+<h1 class="text-center" style="color:#524646;">  من نحن ؟ </h1>        
 </div>
  <div class="col-lg-12 col-12">
 <p style="font-size:18px;font-weight: 500; text-align:center;">
@@ -97,18 +97,19 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <a href="<?php echo site_url('home/courses?category='.$category_details['slug']); ?>" class="category-product-body position-relative">
                             <div class="row">
-                                       <div class="col-lg-8 col-8">
-
-                            <h5 class="pt-0"> <?php echo $category_details['name']; ?></h5>
-                            <p class="hide-cat-text"> </p>
-                
-                        </div>
-                                <div class="col-lg-4 col-4">
+                                        <div class="col-lg-12 col-12">
                            <div class="cate-icon"  style="color: #<?php echo rand(100000, 999999); ?>">
 
-                                <img style="display: block;float: right;" src="<?php echo base_url('uploads/thumbnails/category_thumbnails/'.$category_details['thumbnail']); ?>">
+                                <img style="display: block; margin:auto" src="<?php echo base_url('uploads/thumbnails/category_thumbnails/'.$category_details['thumbnail']); ?>">
                             </div>
                         </div>
+                                       <div class="col-lg-12 col-12">
+
+                            <h5 class="pt-0 text-center"> <?php echo $category_details['name']; ?></h5>
+     
+                
+                        </div>
+                        
                                 <span class="category-hide-icon ml-2"><i class="fa-solid fa-angle-left"></i></span>
                  
                         </div>

@@ -30,7 +30,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'courses' || $page_name == 'course_add' || $page_name == 'course_edit' || $page_name == 'categories' || $page_name == 'category_add' || $page_name == 'category_edit' || $page_name == 'coupons' || $page_name == 'coupon_add' || $page_name == 'coupon_edit') : ?> active <?php endif; ?>">
 					<i class="dripicons-archive"></i>
 					<span> <?php echo get_phrase('courses'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<?php if (has_permission('course')) : ?>
@@ -61,7 +61,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 					<?php if (addon_status('course_bundle')) : ?>
 						<li class="side-nav-item">
 							<a href="javascript: void(0);" aria-expanded="false"><?php echo get_phrase('course_bundle'); ?>
-								<span class="menu-arrow"></span>
+						
 							</a>
 							<ul class="side-nav-third-level" aria-expanded="false">
 								<li class="<?php if ($page_name == 'add_bundle') echo 'active'; ?>">
@@ -85,7 +85,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'tutor_inactive_booking_list' ||$page_name == 'tutor_schedule_list' || $page_name == 'tutor_inactive_schedule_list'  || $page_name == 'tutor_live_class_settings' || $page_name == 'booked_schedule_details' ||$page_name == 'tutor_caregories' || $page_name == 'add_schedule' || $page_name == 'tutor_booking_list') : ?> active <?php endif; ?>">
 					<i class="dripicons-document"></i>
 					<span> <?php echo get_phrase('tutor_booking'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level <?php if ($page_name == 'tutor_inactive_booking_list' ||$page_name == 'tutor_schedule_list' || $page_name == 'tutor_inactive_schedule_list'  || $page_name == 'tutor_live_class_settings' || $page_name == 'booked_schedule_details' ||$page_name == 'tutor_caregories' || $page_name == 'add_schedule' || $page_name == 'tutor_booking_list') echo 'in'; ?>" aria-expanded="false">
 					<li class="<?php if ($page_name == 'tutor_caregories' ) echo 'active'; ?>">
@@ -111,7 +111,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'all_ebooks' || $page_name == 'add_ebook' || $page_name == 'ebook_edit') : ?> active <?php endif; ?>">
 					<i class="dripicons-document"></i>
 					<span> <?php echo get_phrase('ebook'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level <?php if ($page_name == 'ebook_edit') echo 'in'; ?>" aria-expanded="false">
 					<li class="<?php if ($page_name == 'all_ebooks' || $page_name == 'ebook_edit') echo 'active'; ?>">
@@ -122,7 +122,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 					</li>
 					<li class="<?php if ($page_name == 'ebook_payment_history') echo 'active'; ?>">
 						<a href="javascript: void(0);" class="<?php if ($page_name == 'admin_revenue' || $page_name == 'instructor_revenue') : ?> active <?php endif; ?>" aria-expanded="false"><?php echo get_phrase('payment_history'); ?>
-							<span class="menu-arrow"></span>
+					
 						</a>
 
 						<ul class="side-nav-third-level" aria-expanded="false">
@@ -147,7 +147,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'enrol_history' || $page_name == 'enrol_student') : ?> active <?php endif; ?>">
 					<i class="dripicons-network-3"></i>
 					<span> <?php echo get_phrase('Enrollments'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'enrol_student') echo 'active'; ?>">
@@ -165,7 +165,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'admin_revenue' || $page_name == 'instructor_revenue' || $page_name == 'purchase_history' || $page_name == 'invoice') : ?> active <?php endif; ?>">
 					<i class="dripicons-box"></i>
 					<span> <?php echo get_phrase('report'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'admin_revenue') echo 'active'; ?>"> <a href="<?php echo site_url('admin/admin_revenue'); ?>"><?php echo get_phrase('admin_revenue'); ?></a> </li>
@@ -192,7 +192,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'active_affiliator' || $page_name == 'suspend_affiliator' || $page_name == 'pending_affiliator'|| $page_name == 'course_affiliation_history'|| $page_name == 'affiliation_course_payouts'|| $page_name == 'affiliator_add'|| $page_name == 'affiliate_addon_settings') : ?> active <?php endif; ?>">
 					<i class="dripicons-box"></i>
 					<span> <?php echo get_phrase('Affiliate'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 
@@ -259,13 +259,13 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'admins' || $page_name == 'admin_add' || $page_name == 'admin_edit' || $page_name == 'admin_permission' || $page_name == 'instructors' || $page_name == 'instructor_add' || $page_name == 'instructor_edit' || $page_name == 'instructor_payout' || $page_name == 'instructor_settings' || $page_name == 'application_list' || $page_name == 'users' || $page_name == 'user_add' || $page_name == 'user_edit') : ?> active <?php endif; ?>">
 					<i class="dripicons-user-group"></i>
 					<span> <?php echo get_phrase('users'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<?php if (has_permission('admins')) : ?>
 						<li class="side-nav-item <?php if ($page_name == 'admins' || $page_name == 'admin_add' || $page_name == 'admin_edit' || $page_name == 'admin_permission') : ?> active <?php endif; ?>">
 							<a href="javascript: void(0);" class="<?php if ($page_name == 'admins' || $page_name == 'admin_add' || $page_name == 'admin_edit' || $page_name == 'admin_permission') : ?> active <?php endif; ?>" aria-expanded="false"><?php echo get_phrase('admins'); ?>
-								<span class="menu-arrow"></span>
+						
 							</a>
 							<ul class="side-nav-third-level" aria-expanded="false">
 								<li class="<?php if ($page_name == 'admins' || $page_name == 'admin_edit' || $page_name == 'admin_permission') : ?> active <?php endif; ?>">
@@ -282,7 +282,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 						<li class="side-nav-item <?php if ($page_name == 'instructors' || $page_name == 'instructor_edit') : ?> active <?php endif; ?>">
 							<a href="javascript: void(0);" aria-expanded="false" class="<?php if ($page_name == 'instructors' || $page_name == 'instructor_edit') : ?> active <?php endif; ?>">
 								<?php echo get_phrase('instructors'); ?>
-								<span class="menu-arrow"></span>
+						
 							</a>
 							<ul class="side-nav-third-level" aria-expanded="false">
 								<li class="<?php if ($page_name == 'instructors' || $page_name == 'instructor_edit') echo 'active'; ?>">
@@ -313,7 +313,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 					<?php if (has_permission('student')) : ?>
 						<li class="side-nav-item <?php if ($page_name == 'users' || $page_name == 'user_add' || $page_name == 'user_edit') : ?> active <?php endif; ?>">
 							<a href="javascript: void(0);" aria-expanded="false" class="<?php if ($page_name == 'users' || $page_name == 'user_add' || $page_name == 'user_edit') : ?> active <?php endif; ?>"><?php echo get_phrase('students'); ?>
-								<span class="menu-arrow"></span>
+						
 							</a>
 							<ul class="side-nav-third-level" aria-expanded="false">
 								<li class="<?php if ($page_name == 'users' || $page_name == 'user_edit') echo 'active'; ?>">
@@ -334,7 +334,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'offline_payment_pending' || $page_name == 'offline_payment_approve' || $page_name == 'offline_payment_suspended') : ?> active <?php endif; ?>">
 					<i class="dripicons-box"></i>
 					<span> <?php echo get_phrase('offline_payment'); ?></span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'offline_payment_pending') echo 'active'; ?>">
@@ -382,7 +382,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'subscribed_user' || $page_name == 'newsletters') : ?> active <?php endif; ?>">
 					<i class="far fa-envelope-open"></i>
 					<span> <?php echo get_phrase('Newsletter'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'newsletters') echo 'active'; ?>">
@@ -415,7 +415,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'blog' || $page_name == 'blog_add' || $page_name == 'blog_edit' || $page_name == 'blog_category' || $page_name == 'blog_settings' || $page_name == 'instructors_pending_blog') : ?> active <?php endif; ?>">
 					<i class="dripicons-blog"></i>
 					<span> <?php echo get_phrase('blog'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'blog') echo 'active'; ?>">
@@ -443,7 +443,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link">
 					<i class="dripicons-help"></i>
 					<span> <?php echo get_phrase('customer_support'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'tickets') echo 'active'; ?>">
@@ -486,7 +486,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 				<a href="javascript: void(0);" class="side-nav-link">
 					<i class="dripicons-toggles"></i>
 					<span> <?php echo get_phrase('settings'); ?> </span>
-					<span class="menu-arrow"></span>
+			
 				</a>
 				<ul class="side-nav-second-level" aria-expanded="false">
 					<li class="<?php if ($page_name == 'system_settings') echo 'active'; ?>">

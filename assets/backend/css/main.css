@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&wght@700&display=swap');
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 .title_icon {
   font-size: 25px;
@@ -17,6 +17,8 @@
     padding-left: 0px;
     margin-left: -6%;
 }
+
+
 
 .required {
   color: #f44336;
@@ -420,10 +422,13 @@ body.show {
 .page-title {
     
     float:right;
+    font-size: 20px;
+    font-weight: 700;
 }
 .header-title{
     
     float:right;
+      font-size: 18px;
 }
 .metismenu .side-nav-item  {
     
@@ -435,6 +440,7 @@ body.show {
 .metismenu .side-nav-item .side-nav-link {
     
     color:#fff !important;
+    font-size: 16px;
     
 }
 

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
-                <div class="h-1-banner-text mb-3" style="color:#fff;">
+                <div class="h-1-banner-text mb-3" >
                     <?php
                         $banner_title = site_phrase(get_frontend_settings('banner_title'));
                         $banner_title_arr = explode(' ', $banner_title);

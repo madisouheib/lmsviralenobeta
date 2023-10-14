@@ -398,7 +398,7 @@
 
 
 <!---------  Motivetional Speech end ---------------->
-<?php endif; ?>
+
 
 <?php $website_faqs = json_decode(get_frontend_settings('website_faqs'), true); ?>
 <?php if(count($website_faqs) > 0): ?>

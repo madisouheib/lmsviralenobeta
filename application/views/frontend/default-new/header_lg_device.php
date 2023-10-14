@@ -184,8 +184,8 @@
        
 
                     <?php if(!$user_id): ?>
-          <a href="<?php echo site_url('login'); ?>" style=" border: 2px solid #1e293b ; color:#1e293b; border-radius:10px;font-weight:300;font-size: 16px;margin-top:5px; padding:5px;" class="mx-3"> تسجيل الدخول </a>
-          <a href="<?php echo site_url('sign_up'); ?>" style="border: 2px solid #1e293b ; color:#1e293b; border-radius:10px;font-weight:300;font-size: 16px;margin-top:5px; padding:5px;" class="mx-3 text-capitalize"> سجل الآن</a>
+          <a href="<?php echo site_url('login'); ?>" style=" border: 2px solid #1e293b ; color:#1e293b; border-radius:10px;font-weight:500;font-size: 16px;margin-top:5px; padding:10px;" class="mx-2"> تسجيل الدخول </a>
+          <a href="<?php echo site_url('sign_up'); ?>" style="border: 2px solid #1e293b ; color:#1e293b; border-radius:10px;font-weight:500;font-size: 16px;margin-top:5px; padding:10px;" class="mx-2 text-capitalize"> سجل الآن</a>
         <?php endif; ?>
 
         <?php if($user_login): ?>

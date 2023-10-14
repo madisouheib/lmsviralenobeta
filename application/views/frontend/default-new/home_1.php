@@ -10,16 +10,13 @@
                     ?>
                     <h1 style="color:#003666">
                         <?php
-                        foreach($banner_title_arr as $key => $value){
-                            if($key == count($banner_title_arr) - 1){
-                                $value ;
-                            }else{
-                                echo $value.' ';
-                            }
-                        }
+                      
+
+                      echo   site_phrase(get_frontend_settings('start_learning_from_best_platform'));
                         ?>
+
                     </h1>
-                    <p style="color:#003666;"><?php echo site_phrase(get_frontend_settings('banner_sub_title')); ?></p>
+                    <p style="color:#003666;font-size: 16px;"><?php echo site_phrase(get_frontend_settings('banner_sub_title')); ?></p>
 
                     <a class="btn btn-primary"> ابدأ الآن </a>
                 </div>

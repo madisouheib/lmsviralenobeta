@@ -22,7 +22,7 @@
                         ?>
 
                     </h1>
-                    <p style="color:#003666;font-size: 16px;"><?php echo site_phrase(get_frontend_settings('banner_sub_title')); ?></p>
+                    <p style="color:#003666;font-size: 20px;"><?php echo site_phrase(get_frontend_settings('banner_sub_title')); ?></p>
 
                     <a class="btn btn-primary"> ابدأ الآن </a>
                 </div>

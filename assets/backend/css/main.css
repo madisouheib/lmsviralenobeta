@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&wght@700&display=swap');
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap');
+
 .title_icon {
   font-size: 25px;
   vertical-align: middle;
@@ -439,21 +441,20 @@ body.show {
 }
 .metismenu .side-nav-item .side-nav-link {
     
-    color:#fff !important;
+    color:#484444  !important;
     font-size: 16px;
     
 }
 
 .metismenu .side-nav-item .side-nav-link .side-nav-second-level{
     
-       color:#fff !important;
+       color:#484444 !important;
     
 }
 
 .metismenu {
-background-color: #537895;
-background-image: linear-gradient(315deg, #537895 0%, #09203f 74%) !important;
-color:#fff;
+background-color: #f2f6ff;
+
     
 }
 
@@ -501,7 +502,7 @@ body {
 }
 .leftbar-user-name {
     
-    color:#fff!important;
+    color:#fff! important;
     
 }
 .metismenu .side-nav-item  .fa-arrow-circle-left {
@@ -513,9 +514,16 @@ body {
     
     color:#f3f4f7 !important;
 }
+.metismenu .side-nav-item   a:hover {
+
+  background-color: #484444  !important;
+  color:#fff;
+  transition: 0.3;
+}
 a,h1,h2,h3,h4,h5,h6 ,p,li ,button, th ,td,label,span {
     
-    font-family: 'Tajawal', sans-serif !important ;
+
+    font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
 
 }
 .select2-selection__rendered {

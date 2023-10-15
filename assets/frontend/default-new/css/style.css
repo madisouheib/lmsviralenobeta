@@ -1879,7 +1879,7 @@ p{
 }
 .top-categories h1::after{
     content: "";
-    background-image: url("../image/h-1-shape.png");
+
     width: 160px;
     height: 31px;
     position: absolute;

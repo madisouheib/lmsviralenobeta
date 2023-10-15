@@ -3,18 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 col-12 mb-5">
-                <img src="<?php echo base_url('uploads/system/'.get_frontend_settings('light_logo')); ?>">
+                <img style="height: 90px;"> src="<?php echo base_url('uploads/system/'.get_frontend_settings('light_logo')); ?>">
                 <p><?php echo get_settings('website_description'); ?></p>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-4 mb-5">
-                <h1><?php echo site_phrase('top_categories'); ?></h1>
-                <ul>
-                <?php $top_10_categories = $this->crud_model->get_top_categories(6, 'sub_category_id'); ?>
-                <?php foreach($top_10_categories as $top_10_category): ?>
-                  <?php $category_details = $this->crud_model->get_category_details_by_id($top_10_category['sub_category_id'])->row_array(); ?>
-                    <li><a href="<?php echo site_url('home/courses?category='.$category_details['slug']); ?>"> <?php echo $category_details['name']; ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
+              
             </div>
             <div class="col-lg-3 col-md-4 col-sm-4 col-4">
                 <h1><?php echo site_phrase('useful_links'); ?></h1>

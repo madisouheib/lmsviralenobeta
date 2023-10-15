@@ -54,7 +54,7 @@
     
 
  <div class="col-lg-12 col-12">
-<h1 class="text-center" style="color:#524646;">  من نحن ؟ </h1>        
+<h1 class="text-center" style="color:#003666;">  من نحن ؟ </h1>        
 </div>
  <div class="col-lg-12 col-12">
 <p style="font-size:20px;font-weight: 500; text-align:center;color:#003666;">
@@ -140,7 +140,7 @@
 <!---------- Latest courses Section start --------------->
 <section class="courses grid-view-body pb-4">
     <div class="container">
-        <h1 class="text-center"><span><?php echo site_phrase('top') . ' 10 ' . site_phrase('latest_courses'); ?></span></h1>
+        <h1 class="text-center"><span>تعرف على أفضل الدورات التدريبية </span></h1>
         <p class="text-center"><?php echo site_phrase('These_are_the_most_latest_courses_among_Listen_Courses_learners_worldwide')?></p>
         <div class="courses-card">
             <div class="course-group-slider " >
@@ -205,13 +205,13 @@
 
 
 
-                        <div id="top_course_feature_<?php echo $latest_course['id']; ?>" class="course-popover-content">
+                        <div id="top_course_feature_<?php echo $latest_course['id']; ?>" style="direction: rtl;" class="course-popover-content">
                             <?php if ($latest_course['last_modified'] == "") : ?>
-                                <p class="last-update"><?php echo site_phrase('last_updated') . ' ' . date('D, d-M-Y', $latest_course['date_added']); ?></p>
+                                <p class="last-update" ><?php echo site_phrase('last_updated') . ' ' . date('D, d-M-Y', $latest_course['date_added']); ?></p>
                             <?php else : ?>
                                 <p class="last-update"><?php echo site_phrase('last_updated') . ' ' . date('D, d-M-Y', $latest_course['last_modified']); ?></p>
                             <?php endif; ?>
-                            <div class="course-title">
+                            <div class="course-title" style="float:right;">
                                  <a href="<?php echo site_url('home/course/' . rawurlencode(slugify($latest_course['title'])) . '/' . $latest_course['id']); ?>"><?php echo $latest_course['title']; ?></a>
                             </div>
                             <div class="course-meta">
@@ -232,7 +232,7 @@
                             <div class="course-subtitle">
                                  <?php echo $latest_course['short_description']; ?>
                             </div>
-                            <h6 class="text-black text-14px mb-1"><?php echo get_phrase('Outcomes') ?>:</h6>
+                            <h6 class="text-black text-14px mb-1"> <?php echo get_phrase('Outcomes') ?>:</h6>
                             <ul class="will-learn">
                                 <?php $outcomes = json_decode($latest_course['outcomes']);
                                 foreach ($outcomes as $outcome) : ?>

@@ -14,8 +14,8 @@
     </ul>
 </div>
 
-<div class="course-description requirements">
-    <h3 class="description-head"><?php echo get_phrase('Requirements') ?></h3>
+<div class="course-description requirements" >
+    <h3 class="description-head" style="direction:rtl;" ><?php echo get_phrase('Requirements') ?></h3>
     <ul>
         <?php foreach (json_decode($course_details['requirements']) as $requirement) : ?>
             <?php if ($requirement != "") : ?>

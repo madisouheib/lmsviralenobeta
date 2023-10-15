@@ -24,9 +24,6 @@ class Crud_model extends CI_Model
         $this->db->where('parent', 0);
         return $this->db->get('category');
     }
-
-
-
     public function get_categories_all($param1 = "")
     {
         if ($param1 != "") {
@@ -391,6 +388,27 @@ class Crud_model extends CI_Model
         $data['value'] = html_escape($this->input->post('meta_pixel_id'));
         $this->db->where('key', 'meta_pixel_id');
         $this->db->update('settings', $data);
+
+
+        
+        $this->db->where('key', 'account_disable');
+        $row = $this->db->get('settings');
+        if($row->num_rows() > 0){
+            $this->db->where('key', 'account_disable');
+            $this->db->update('settings', ['value' => $this->input->post('account_disable')]);
+        }else{
+            $this->db->insert('settings', ['key' => 'account_disable', 'value' => $this->input->post('account_disable')]);
+        }
+
+        $this->db->where('key', 'timezone');
+        $row = $this->db->get('settings');
+        if($row->num_rows() > 0){
+            $this->db->where('key', 'timezone');
+            $this->db->update('settings', ['value' => $this->input->post('timezone')]);
+        }else{
+            $this->db->insert('settings', ['key' => 'timezone', 'value' => $this->input->post('timezone')]);
+        }
+        
     }
 
     public function update_smtp_settings()
@@ -703,6 +721,7 @@ class Crud_model extends CI_Model
         $data['section'] = json_encode(array());
 
         $data['user_id'] = $this->session->userdata('user_id');
+        $data['creator'] = $data['user_id'];
 
         $admin_details = $this->user_model->get_admin_details()->row_array();
         if ($admin_details['id'] == $data['user_id']) {
@@ -1068,28 +1087,12 @@ class Crud_model extends CI_Model
 
     public function get_courses_by_user_id($param1 = "")
     {
-        $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($param1);
 
-        $this->db->where('status', 'draft');
-        $this->db->where('user_id', $param1);
-        if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-            $this->db->or_where_in('id', $multi_instructor_course_ids);
-        }
-        $courses['draft'] = $this->db->get('course');
+        $courses['draft'] = $this->get_courses_by_instructor_id($param1, 'draft');
 
-        $this->db->where('status', 'pending');
-        $this->db->where('user_id', $param1);
-        if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-            $this->db->or_where_in('id', $multi_instructor_course_ids);
-        }
-        $courses['pending'] = $this->db->get('course');
+        $courses['pending'] = $this->get_courses_by_instructor_id($param1, 'pending');
 
-        $this->db->where('status', 'active');
-        $this->db->where('user_id', $param1);
-        if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-            $this->db->or_where_in('id', $multi_instructor_course_ids);
-        }
-        $courses['active'] = $this->db->get('course');
+        $courses['active'] = $this->get_courses_by_instructor_id($param1, 'active');
 
         return $courses;
     }
@@ -1214,40 +1217,16 @@ class Crud_model extends CI_Model
 
     public function get_status_wise_courses_for_instructor($status = "")
     {
-        $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($this->session->userdata('user_id'));
+        $user_id = $this->session->userdata('user_id');
 
         if ($status != "") {
-            $this->db->where('status', $status);
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->where_in('id', $multi_instructor_course_ids);
-            } else {
-                $this->db->where('creator', $this->session->userdata('user_id'));
-            }
-            $courses = $this->db->get('course');
+            $courses = $this->get_courses_by_instructor_id($this->session->userdata('user_id'), $status);
         } else {
-            $this->db->where('status', 'draft');
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->or_where_in('id', $multi_instructor_course_ids);
-            } else {
-                $this->db->where('creator', $this->session->userdata('user_id'));
-            }
-            $courses['draft'] = $this->db->get('course');
+            $courses['draft'] = $this->get_courses_by_instructor_id($user_id, 'draft');
+            
+            $courses['pending'] = $this->get_courses_by_instructor_id($user_id, 'pending');
 
-            $this->db->where('status', 'draft');
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->or_where_in('id', $multi_instructor_course_ids);
-            } else {
-                $this->db->where('creator', $this->session->userdata('user_id'));
-            }
-            $courses['pending'] = $this->db->get('course');
-
-            $this->db->where('status', 'draft');
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->or_where_in('id', $multi_instructor_course_ids);
-            } else {
-                $this->db->where('creator', $this->session->userdata('user_id'));
-            }
-            $courses['active'] = $this->db->get('course');
+            $courses['active'] = $this->get_courses_by_instructor_id($user_id, 'active');
         }
         return $courses;
     }
@@ -1262,26 +1241,10 @@ class Crud_model extends CI_Model
 
     public function get_instructor_wise_courses($instructor_id = "", $return_as = "")
     {
-        // GET COURSE IDS FOR MULTI INSTRUCTOR
-        $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($instructor_id);
-
-        $this->db->where('creator', $instructor_id);
-
-        if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-            $this->db->or_where_in('id', $multi_instructor_course_ids);
-        }
-
-        $courses = $this->db->get('course');
         if ($return_as == 'simple_array') {
-            $array = array();
-            foreach ($courses->result_array() as $course) {
-                if (!in_array($course['id'], $array)) {
-                    array_push($array, $course['id']);
-                }
-            }
-            return $array;
+            return $this->multi_instructor_course_ids_for_an_instructor($instructor_id);
         } else {
-            return $courses;
+            return $this->get_courses_by_instructor_id($instructor_id);
         }
     }
 
@@ -1298,6 +1261,14 @@ class Crud_model extends CI_Model
 
     public function add_section($course_id)
     {
+        $date_range_with_time = $this->input->post('date_range_of_study_plan');
+        if($date_range_with_time != ''){
+            $date_range_with_time_arr = explode(' - ', $date_range_with_time);
+            $data['start_date'] = strtotime($date_range_with_time_arr[0]);
+            $data['end_date'] = strtotime($date_range_with_time_arr[1]);
+            $data['restricted_by'] = $this->input->post('restricted_by');
+        }
+
         $data['title'] = html_escape($this->input->post('title'));
         $data['course_id'] = $course_id;
         $this->db->insert('section', $data);
@@ -1318,10 +1289,19 @@ class Crud_model extends CI_Model
             $this->db->where('id', $course_id);
             $this->db->update('course', $updater);
         }
+
     }
 
     public function edit_section($section_id)
     {
+        $date_range_with_time = $this->input->post('date_range_of_study_plan');
+        if($date_range_with_time != ''){
+            $date_range_with_time_arr = explode(' - ', $date_range_with_time);
+            $data['start_date'] = strtotime($date_range_with_time_arr[0]);
+            $data['end_date'] = strtotime($date_range_with_time_arr[1]);
+            $data['restricted_by'] = $this->input->post('restricted_by');
+        }
+
         $data['title'] = $this->input->post('title');
         $this->db->where('id', $section_id);
         $this->db->update('section', $data);
@@ -1613,7 +1593,7 @@ class Crud_model extends CI_Model
         //video caption
         if(isset($_FILES['caption']) && !empty($_FILES['caption']['name'])){
             $data['caption'] = random(15).'.vtt';
-            move_uploaded_file($_FILES['caption']['tmp_name'], 'uploads/lesson_files/captions/' . $data['caption']);
+            move_uploaded_file($_FILES['caption']['tmp_name'], 'uploads/captions/' . $data['caption']);
         }
 
 
@@ -1900,7 +1880,7 @@ class Crud_model extends CI_Model
         //video caption
         if(isset($_FILES['caption']) && !empty($_FILES['caption']['name'])){
             $data['caption'] = random(15).'.vtt';
-            move_uploaded_file($_FILES['caption']['tmp_name'], 'uploads/lesson_files/captions/' . $data['caption']);
+            move_uploaded_file($_FILES['caption']['tmp_name'], 'uploads/captions/' . $data['caption']);
         }
 
 
@@ -2895,13 +2875,17 @@ class Crud_model extends CI_Model
     {
         if ($category_id > 0 && $sub_category_id > 0 && $instructor_id > 0) {
 
-            $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($instructor_id);
-            $this->db->where('category_id', $category_id);
-            $this->db->where('sub_category_id', $sub_category_id);
-            $this->db->where('user_id', $instructor_id);
+            $this->db->group_start();
+            $this->db->like('user_id', ','.$instructor_id);
+            $this->db->or_like('user_id', $instructor_id.',');
+            $this->db->or_where('creator', $instructor_id);
+            $this->db->group_end();
 
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->or_where_in('id', $multi_instructor_course_ids);
+            if($status != ""){
+                $this->db->group_start();
+                $this->db->where('category_id', $category_id);
+                $this->db->where('sub_category_id', $sub_category_id);
+                $this->db->group_end();
             }
 
             return $this->db->get('course');
@@ -2914,12 +2898,6 @@ class Crud_model extends CI_Model
 
     public function filter_course_for_backend($category_id, $instructor_id, $price, $status)
     {
-        // MULTI INSTRUCTOR COURSE IDS
-        $multi_instructor_course_ids = array();
-        if ($instructor_id != "all") {
-            $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($instructor_id);
-        }
-
         if ($category_id != "all") {
             $this->db->where('sub_category_id', $category_id);
         }
@@ -2933,10 +2911,11 @@ class Crud_model extends CI_Model
         }
 
         if ($instructor_id != "all") {
-            $this->db->where('user_id', $instructor_id);
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->or_where_in('id', $multi_instructor_course_ids);
-            }
+            $this->db->group_start();
+            $this->db->like('user_id', ','.$instructor_id);
+            $this->db->or_like('user_id', $instructor_id.',');
+            $this->db->or_where('creator', $instructor_id);
+            $this->db->group_end();
         }
 
         if ($status != "all") {
@@ -2982,12 +2961,6 @@ class Crud_model extends CI_Model
 
     public function get_free_and_paid_courses($price_status = "", $instructor_id = "")
     {
-        // MULTI INSTRUCTOR COURSE IDS
-        $multi_instructor_course_ids = array();
-        if ($instructor_id > 0) {
-            $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($instructor_id);
-        }
-
         if ($price_status == 'free') {
             $this->db->where('is_free_course', 1);
         } else {
@@ -2996,11 +2969,11 @@ class Crud_model extends CI_Model
 
 
         if (!$this->session->userdata('admin_login')) {
-            if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-                $this->db->where_in('id', $multi_instructor_course_ids);
-            } else {
-                $this->db->where('creator', $instructor_id);
-            }
+            $this->db->group_start();
+            $this->db->like('user_id', ','.$instructor_id);
+            $this->db->or_like('user_id', $instructor_id.',');
+            $this->db->or_where('creator', $instructor_id);
+            $this->db->group_end();
         }
         return $this->db->get('course');
     }
@@ -3666,15 +3639,15 @@ class Crud_model extends CI_Model
 
     function get_course_by_user($user_id = "", $course_type = "")
     {
-        $multi_instructor_course_ids = $this->multi_instructor_course_ids_for_an_instructor($user_id);
         if ($course_type != "") {
             $this->db->where('course_type', $course_type);
         }
-        $this->db->where('user_id', $user_id);
 
-        if ($multi_instructor_course_ids && count($multi_instructor_course_ids)) {
-            $this->db->or_where_in('id', $multi_instructor_course_ids);
-        }
+        $this->db->group_start();
+        $this->db->like('user_id', ','.$instructor_id);
+        $this->db->or_like('user_id', $instructor_id.',');
+        $this->db->or_where('creator', $instructor_id);
+        $this->db->group_end();
 
         return $this->db->get('course');
     }
@@ -3682,14 +3655,14 @@ class Crud_model extends CI_Model
     public function multi_instructor_course_ids_for_an_instructor($instructor_id)
     {
         $course_ids = array();
-        $multi_instructor_courses = $this->db->like('user_id', $instructor_id)->where('multi_instructor', 1)->get('course')->result_array();
-        foreach ($multi_instructor_courses as $key => $multi_instructor_course) {
-            $exploded_user_ids = explode(',', $multi_instructor_course['user_id']);
-            if (in_array($instructor_id, $exploded_user_ids)) {
-                array_push($course_ids, $multi_instructor_course['id']);
-            } elseif ($multi_instructor_course['creator'] == $instructor_id) {
-                array_push($course_ids, $multi_instructor_course['id']);
-            }
+
+        $this->db->like('user_id', ','.$instructor_id);
+        $this->db->or_like('user_id', $instructor_id.',');
+        $this->db->or_where('creator', $instructor_id);
+        $courses = $this->db->get('course')->result_array();
+
+        foreach ($courses as $key => $course) {
+            $course_ids[] = $course['id'];
         }
         return $course_ids;
     }
@@ -4631,6 +4604,56 @@ class Crud_model extends CI_Model
         }
 
         return false;
+    }
+
+    function get_course_instructors_id($course_id = ""){
+        $row = $this->get_course_by_id($course_id);
+        if($row->num_rows() > 0){
+            $instructors_arr = explode(',', $row->row('user_id'));
+            return array_filter($instructors_arr);
+        }else{
+            return array();
+        }
+    }
+
+    public function get_courses_by_instructor_id($instructor_id = 0, $status = "")
+    {
+        $this->db->group_start();
+        $this->db->like('user_id', ','.$instructor_id);
+        $this->db->or_like('user_id', $instructor_id.',');
+        $this->db->or_where('creator', $instructor_id);
+        $this->db->group_end();
+
+        if($status != ""){
+            $this->db->group_start();
+            $this->db->where('status', $status);
+            $this->db->group_end();
+        }
+
+        return $this->db->get('course');
+    }
+
+    function update_contact_info(){
+        $data['email'] = $this->input->post('email');
+        $data['phone'] = $this->input->post('phone');
+        $data['address'] = $this->input->post('address');
+        $data['office_hours'] = $this->input->post('office_hours');
+        $contact_information = json_encode($data);
+
+        $row = $this->db->where('key', 'contact_info')->get('frontend_settings');
+        if($row->num_rows() > 0){
+            $this->db->where('key', 'contact_info')->update('frontend_settings', ['value' => $contact_information]);
+        }else{
+            $this->db->insert('frontend_settings', ['key' => 'contact_info','value' => $contact_information]);
+        }
+    }
+
+    function get_contacts($id = ""){
+        if($id > 0){
+            $this->db->where('id', $id);
+        }
+
+        return $this->db->get('contact');
     }
 
     

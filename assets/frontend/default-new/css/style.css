@@ -1699,7 +1699,7 @@ p{
 
 .courses h1 span::before{
     content: "";
-    background-image: url("../image/h-1-bn-shape-2.png");
+
     width: 116px;
     height: 21px;
     position: absolute;

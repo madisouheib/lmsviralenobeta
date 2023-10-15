@@ -32,7 +32,7 @@
                         <form class="required-form" action="<?php echo site_url('admin/course_actions/add'); ?>" method="post" enctype="multipart/form-data">
                             <div class="scrollable-tab-section" id="basicwizard">
 
-                                <button type="button" class="scrollable-tab-btn-left" ><i class="mdi mdi-arrow-left"></i></button>
+                              
 
                                 <div class="scrollable-tab">
                                     <ul class="nav nav-pills nav-justified form-wizard-header" style="flex-wrap: unset;">
@@ -80,7 +80,7 @@
                                     </ul>
                                     
                                 </div>
-                                <button type="button" class="scrollable-tab-btn-left" ><i class="mdi mdi-arrow-left"></i></button>
+                             
 
 
                                 <div class="tab-content b-0 mb-0">

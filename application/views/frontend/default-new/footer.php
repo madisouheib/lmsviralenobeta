@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 col-12 mb-5">
-                <img style="height: 90px;" src="<?php echo base_url('uploads/system/'.get_frontend_settings('light_logo')); ?>">
+                <img style="height: 140px;width: 100%;" src="<?php echo base_url('uploads/system/'.get_frontend_settings('light_logo')); ?>">
                 <p><?php echo get_settings('website_description'); ?></p>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-4 mb-5">

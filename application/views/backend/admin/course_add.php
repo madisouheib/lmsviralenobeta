@@ -23,7 +23,7 @@
                         <h4 class="header-title my-1"><?php echo get_phrase('course_adding_form'); ?></h4>
                     </div>
                     <div class="col-md-6">
-                        <a href="<?php echo site_url('admin/courses'); ?>" class="alignToTitle btn btn-outline-secondary btn-rounded btn-sm my-1"> <i class=" mdi mdi-keyboard-backspace"></i> <?php echo get_phrase('back_to_course_list'); ?></a>
+                        <a href="<?php echo site_url('admin/courses'); ?>" class=" btn btn-outline-secondary btn-rounded btn-sm my-1"> <i class=" mdi mdi-keyboard-backspace"></i> <?php echo get_phrase('back_to_course_list'); ?></a>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@
                              
 
 
-                                <div class="tab-content b-0 mb-0">
+                                <div class="tab-content b-0 mb-0 mt-4">
                                     <div class="tab-pane" id="basic">
                                         <div class="row justify-content-center">
                                             <div class="col-xl-8">

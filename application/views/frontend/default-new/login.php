@@ -6,9 +6,7 @@
     <section class="sign-up  pt-5" style="padding-top:6em;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
-                    <img width="65%" src="<?php echo site_url('assets/frontend/default-new/image/login-security.gif') ?>">
-                </div>
+              
                 <div class="col-lg-5 col-md-6 col-sm-12 col-12 ">
                     <div class="sing-up-right">
                         <h3><?php echo get_phrase('Log In'); ?><span>!</span></h3>
@@ -59,6 +57,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                  <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
+                    <img  src="<?php echo site_url('assets/frontend/default-new/image/tasjil.gif') ?>">
                 </div>
             </div>
         </div>

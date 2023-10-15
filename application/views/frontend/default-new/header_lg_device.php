@@ -77,7 +77,7 @@
                                  </li>
                                  
                                  <li>
-                                     <a class="custom-link" href="#" style="" >تواصل معنا</a>
+                                     <a class="custom-link" href="<?php echo base_url('home/about_us') ?>" style="" >تواصل معنا</a>
                                  </li>
                               </ul>
                            </nav>

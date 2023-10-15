@@ -36,7 +36,7 @@ $course_details = $this->crud_model->get_course_by_id($course_id)->row_array();
                         <form class="required-form" action="<?php echo site_url('admin/course_actions/edit/' . $course_id); ?>" method="post" enctype="multipart/form-data" autocomplete="off">
                             <div class="scrollable-tab-section" id="basicwizard">
 
-                                <button type="button" class="scrollable-tab-btn-left" ><i class="mdi mdi-arrow-left"></i></button>
+                             
 
                                 <div class="scrollable-tab">
                                     <ul class="nav nav-pills nav-justified form-wizard-header">
@@ -136,7 +136,7 @@ $course_details = $this->crud_model->get_course_by_id($course_id)->row_array();
                                     </ul>
                                 </div>
 
-                                <button type="button" class="scrollable-tab-btn-right" ><i class="mdi mdi-arrow-right"></i></button>
+                    
 
                                 <div class="tab-content b-0 mb-0">
                                     <div class="tab-pane" id="curriculum">
@@ -674,15 +674,14 @@ $course_details = $this->crud_model->get_course_by_id($course_id)->row_array();
                                             </div> <!-- end col -->
                                         </div> <!-- end row -->
                                     </div>
-
-                                    <ul class="list-inline mb-0 wizard text-center">
-                                        <li class="previous list-inline-item">
-                                            <a href="javascript:;" class="btn btn-info"> <i class="mdi mdi-arrow-left-bold"></i> </a>
-                                        </li>
-                                        <li class="next list-inline-item">
-                                            <a href="javascript:;" class="btn btn-info"> <i class="mdi mdi-arrow-right-bold"></i> </a>
-                                        </li>
-                                    </ul>
+    <ul class="list-inline mb-0 wizard text-center">
+                                    <li class="previous list-inline-item">
+                                        <a href="javascript:;" class="btn btn-info"><i class="mdi mdi-arrow-right-bold"></i>  السابق    </a>
+                                    </li>
+                                    <li class="next list-inline-item">
+                                        <a href="javascript:;" class="btn btn-info">التالي <i class="mdi mdi-arrow-left-bold"></i> </a>
+                                    </li>
+                                </ul>
 
                                 </div> <!-- tab-content -->
                             </div> <!-- end #progressbarwizard-->

@@ -16,6 +16,7 @@
             </div>
         </div>
     </div>
+    <h5 class="header-title mt-5 mt-sm-0"><?php echo get_phrase('select_lesson_type') ?></h5>
 <?php else: ?>
     <div class="alert alert-info" role="alert">
         Course: <strong><?= $this->crud_model->get_course_by_id($param2)->row('title'); ?></strong>
@@ -23,13 +24,15 @@
     <input id="course_id_for_lesson" type="hidden" value="<?= $param2; ?>" name="course_id_for_lesson">
 <?php endif; ?>
 
-<h5 class="header-title mt-5 mt-sm-0"><?php echo get_phrase('select_lesson_type') ?></h5>
 
-<div class="mt-3">
+
+<div class="mt-3 row">
+    <div class="col-12 " >
     <div class="custom-control custom-radio">
         <input type="radio" id="youtube" name="lesson_type" class="custom-control-input" value="youtube" <?php if($selected_lesson == 'youtube') echo 'checked'; ?>>
-        <label class="custom-control-label" for="youtube">YouTube <?php echo get_phrase('video'); ?></label>
+        <label class="custom-control-label float-right" for="youtube">YouTube <?php echo get_phrase('video'); ?></label>
     </div>
+
 
     <!-- <div class="custom-control custom-radio">
         <input type="radio" id="academy_cloud" name="lesson_type" class="custom-control-input" value="academy_cloud" <?php if($selected_lesson == 'academy_cloud') echo 'checked'; ?>>
@@ -37,44 +40,45 @@
     </div> -->
 
     <div class="custom-control custom-radio">
+        <label class="custom-control-label float-right" for="vimeo">Vimeo <?php echo get_phrase('video'); ?></label>
         <input type="radio" id="vimeo" name="lesson_type" class="custom-control-input" value="vimeo" <?php if($selected_lesson == 'vimeo') echo 'checked'; ?>>
-        <label class="custom-control-label" for="vimeo">Vimeo <?php echo get_phrase('video'); ?></label>
+        
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="video_file" name="lesson_type" class="custom-control-input" value="video" <?php if($selected_lesson == 'video') echo 'checked'; ?>>
-        <label class="custom-control-label" for="video_file"><?php echo get_phrase('video_file'); ?></label>
+        <label class="custom-control-label float-right" for="video_file"><?php echo get_phrase('video_file'); ?></label>
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="html5" name="lesson_type" class="custom-control-input" value="html5" <?php if($selected_lesson == 'html5') echo 'checked'; ?>>
-        <label class="custom-control-label" for="html5"> <?php echo get_phrase("video_url"); ?> [ <strong>.mp4</strong> ]</label>
+        <label class="custom-control-label float-right" for="html5"> <?php echo get_phrase("video_url"); ?> [ <strong>.mp4</strong> ]</label>
     </div>
     <?php if (addon_status('amazon-s3')): ?>
         <div class="custom-control custom-radio">
             <input type="radio" id="amazon-s3" name="lesson_type" class="custom-control-input" value="amazon-s3" <?php if($selected_lesson == 'amazon-s3') echo 'checked'; ?>>
-            <label class="custom-control-label" for="amazon-s3">Amazon S3 Bucket</label>
+            <label class="custom-control-label float-right" for="amazon-s3">Amazon S3 Bucket</label>
         </div>
     <?php endif;?>
     <div class="custom-control custom-radio">
         <input type="radio" id="google_drive_video" name="lesson_type" class="custom-control-input" value="google_drive_video" <?php if($selected_lesson == 'google_drive_video') echo 'checked'; ?>>
-        <label class="custom-control-label" for="google_drive_video"><?php echo get_phrase('google_drive_video'); ?></label>
+        <label class="custom-control-label float-right" for="google_drive_video"><?php echo get_phrase('google_drive_video'); ?></label>
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="document" name="lesson_type" class="custom-control-input" value="document" <?php if($selected_lesson == 'document') echo 'checked'; ?>>
-        <label class="custom-control-label" for="document"><?php echo get_phrase('document_file'); ?></label>
+        <label class="custom-control-label float-right" for="document"><?php echo get_phrase('document_file'); ?></label>
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="text" name="lesson_type" class="custom-control-input" value="text" <?php if($selected_lesson == 'text') echo 'checked'; ?>>
-        <label class="custom-control-label" for="text"><?php echo get_phrase('text'); ?></label>
+        <label class="custom-control-label float-right" for="text"><?php echo get_phrase('text'); ?></label>
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="image" name="lesson_type" class="custom-control-input" value="image" <?php if($selected_lesson == 'image') echo 'checked'; ?>>
-        <label class="custom-control-label" for="image"><?php echo get_phrase('image_file'); ?></label>
+        <label class="custom-control-label float-right" for="image"><?php echo get_phrase('image_file'); ?></label>
     </div>
     <div class="custom-control custom-radio">
         <input type="radio" id="iframe" name="lesson_type" class="custom-control-input" value="iframe" <?php if($selected_lesson == 'iframe') echo 'checked'; ?>>
-        <label class="custom-control-label" for="iframe"><?php echo get_phrase('iframe_embed'); ?></label>
+        <label class="custom-control-label float-right" for="iframe"><?php echo get_phrase('iframe_embed'); ?></label>
     </div>
-
+</div>
     <div class="mt-3">
         <a href="javascript::void(0)"
         type="button"

@@ -519,16 +519,42 @@ body {
     
     color:#484444 !important;
 }
+.modal-body .scrollableModalTitle {
+
+
+}
+.modal-dialog label {
+
+  
+}
+.modal-body .title {
+
+  float:right;
+}
+
+.modal-body .alert {
+  float: right;
+}
+.modal-body .form-group label {
+
+  float:right;
+  
+}
+.text-muted {
+
+  float: right !important;
+}
 .metismenu .side-nav-item   a:hover {
 
   background-color: #484444  !important;
   color:#fff  !important;
   transition: 0.3;
 }
-a,h1,h2,h3,h4,h5,h6 ,p,li ,button, th ,td,label,span {
+a,h1,h2,h3,h4,h5,h6 ,p,li ,button, th ,td,label,span ,.alert{
     
 
     font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
+    direction: rtl;
 
 }
 input::placeholder {

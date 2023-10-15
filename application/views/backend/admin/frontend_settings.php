@@ -22,12 +22,15 @@
                             <span class="d-none d-lg-block"><?php echo site_phrase('Frontend Settings'); ?></span>
                         </a>
                     </li>
+                    <?php /*
                     <li class="nav-item">
                         <a href="#homePageLayout" data-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
                             <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>
                             <span class="d-none d-lg-block"><?php echo site_phrase('Home page layout'); ?></span>
                         </a>
                     </li>
+
+                    <?php  */ ?>
                     <li class="nav-item">
                         <a href="#motivational_speech" data-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
                             <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>

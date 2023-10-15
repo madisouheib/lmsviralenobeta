@@ -55,14 +55,14 @@
 " >
                               <ul class="navbar-nav main-nav-wrap">
                                  <li class="nav-item">
-                                    <a class="custom-link"  href="#" style="" >من نحن</a>
+                                    <a class="custom-link"  href="<?php echo base_url('page/about') ?>" style="" >من نحن</a>
                                    
                                  </li>
                                  
                                
                                  
                                  <li>
-                                    <a class="custom-link" href="#" style="">الأخبار</a>
+                                    <a class="custom-link" href="<?php echo base_url('blog') ?>" style="">الأخبار</a>
                                 
                                  </li>
                                  

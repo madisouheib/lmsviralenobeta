@@ -6,10 +6,7 @@
 <section class="sign-up my-5 pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
-                <img width="65%" src="<?php echo site_url('assets/frontend/default-new/image/login-security.gif') ?>">
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12 col-12 ">
+              <div class="col-lg-5 col-md-6 col-sm-12 col-12 ">
                 <div class="sing-up-right">
                     <h3><?php echo get_phrase('Sign Up'); ?><span>!</span></h3>
                     <p><?php echo get_phrase('Explore, learn, and grow with us. Enjoy a seamless and enriching educational journey. Lets begin!') ?></p>
@@ -40,7 +37,7 @@
                             <h5><?php echo get_phrase('Password') ?></h5>
                             <div class="position-relative">
                                 <i class="fa-solid fa-key"></i>
-                                <i class="fa-solid fas fa-eye cursor-pointer" onclick="if($('#password').attr('type') == 'text'){$('#password').attr('type', 'password');}else{$('#password').attr('type', 'text');} $(this).toggleClass('fa-eye'); $(this).toggleClass('fa-eye-slash') " style="right: 20px; left: unset;"></i>
+                             
                                 <input class="form-control" id="password" type="password" name="password" placeholder="<?php echo get_phrase('Enter your valid password'); ?>" required>
                             </div>
                         </div>
@@ -48,7 +45,7 @@
                         <?php if(get_settings('allow_instructor')): ?>
                             <div class="mb-4">
                                 <input id="instructor" type="checkbox" onchange="$('#become-instructor-fields').toggle()" name="instructor" value="yes" <?php echo isset($_GET['instructor']) ? 'checked':''; ?>>
-                                <label for="instructor"><?php echo get_phrase('Apply to Become an instructor'); ?></label>
+                                <label for="instructor"> التسجيل كشركة </label>
                             </div>
 
                             <div id="become-instructor-fields" class="<?php echo isset($_GET['instructor']) ?  '':'d-hidden'; ?>">
@@ -103,6 +100,10 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
+                <img src="<?php echo site_url('assets/frontend/default-new/image/sailor.gif') ?>">
+            </div>
+          
         </div>
     </div>
 </section>

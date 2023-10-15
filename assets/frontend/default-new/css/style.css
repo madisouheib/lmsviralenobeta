@@ -15,7 +15,7 @@
   --color-1 :  #1E293B;
   --color-2 :  #000;
   --color-3 :  #505763;
-  --color-4 :  #00aeff;
+  --color-4 :  #0C6AB4;
   --color-5 :  #000;
   --color-6 :  #676C7D;
   --color-7 :  #261954;
@@ -23,10 +23,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -59,10 +59,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -95,10 +95,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -123,7 +123,7 @@
   --color-1 :  #1E293B;
   --color-2 :  #000;
   --color-3 :  #505763;
-  --color-4 :  #00aeff;
+  --color-4 :  #0C6AB4;
   --color-5 :  #000;
   --color-6 :  #676C7D;
   --color-7 :  #261954;
@@ -131,10 +131,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -159,7 +159,7 @@
   --color-1 :  #1E293B;
   --color-2 :  #000;
   --color-3 :  #505763;
-  --color-4 :  #00aeff;
+  --color-4 :  #0C6AB4;
   --color-5 :  #000;
   --color-6 :  #676C7D;
   --color-7 :  #261954;
@@ -167,10 +167,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -195,7 +195,7 @@
   --color-1 :  #1E293B;
   --color-2 :  #000;
   --color-3 :  #505763;
-  --color-4 :  #00aeff;
+  --color-4 :  #0C6AB4;
   --color-5 :  #000;
   --color-6 :  #676C7D;
   --color-7 :  #261954;
@@ -203,10 +203,10 @@
   --color-9 :  #fff;
   --color-10 :  #1E293B;
   --color-11 :   #6E798A;
-  --color-12: #00aeff3a;
+  --color-12: #0C6AB43a;
   --color-13: #6D7487;
   --color-14: #212534;
-  --color-15: #00aeff58;
+  --color-15: #0C6AB458;
   --color-16:  #6e798aab;
   --color-17 :  #0080FF;
   --hover-color :  #f2f3f5;
@@ -712,7 +712,7 @@ p{
   font-weight: 500;
 }
 .menu_pro_wish-flex .spandiv span{
-  color: #00aeff;
+  color: #0C6AB4;
   font-size: 13px;
   font-weight: 500;
 }
@@ -1002,7 +1002,7 @@ p{
 }
 .search-icon{
 	font-size: 15px;
-	border: 1px solid #00aeff;
+	border: 1px solid #0C6AB4;
   color: var(--color-1);
 	display: inline-block;
 	text-align: center;
@@ -1014,7 +1014,7 @@ p{
 .m-cross-icon,
 .m-search-icon{
 	font-size: 15px;
-	border: 1px solid #00aeff;
+	border: 1px solid #0C6AB4;
 	display: inline-block;
 	text-align: center;
 	border-radius: 3px;
@@ -1024,13 +1024,13 @@ p{
 }
 
 .search-item span:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
 }
 .cross-icon{
   display: none;
   font-size: 15px;
-	border: 1px solid #00aeff;
+	border: 1px solid #0C6AB4;
 	text-align: center;
 	border-radius: 3px;
   transition: .5s;
@@ -1039,7 +1039,7 @@ p{
 }
 .m-cross-icon{
   font-size: 15px;
-	border: 1px solid #00aeff;
+	border: 1px solid #0C6AB4;
 	text-align: center;
 	border-radius: 3px;
   transition: .5s;
@@ -1140,7 +1140,7 @@ p{
     margin-top: 54px;
 }
 .h-1-banner .h-1-banner-text h1 span{
-    color: #00aeff;
+    color: #0C6AB4;
     position: relative;
 }
 .h-1-banner .h-1-banner-text h1 span::after{
@@ -1550,7 +1550,7 @@ p{
     position: absolute;
     top: 9px;
     right: 12px;
-    background-color: #00aeff;
+    background-color: #0C6AB4;
     border: none;
     border-radius: 5px;
     padding: 9px 14px;
@@ -1604,7 +1604,7 @@ p{
     margin-top: 54px;
 }
 .h-1-banner-custom .h-1-banner-text h1 span{
-    color: #00aeff;
+    color: #0C6AB4;
     position: relative;
 }
 .h-1-banner-custom .h-1-banner-text h1 span::after{
@@ -1730,7 +1730,7 @@ p{
     color: var(--color-1);
 }
 .courses-card-body:hover .courses-text h5{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 .courses-card .courses-card-body .courses-text{
     padding: 12px;
@@ -1801,7 +1801,7 @@ p{
     justify-content: space-between;
 }
 .courses-card-body .courses-text .courses-price .courses-price-right i{
-    color: #00aeff;
+    color: #0C6AB4;
     padding-right: 5px;
 }
 .courses-card .courses-card-body .courses-card-image .courses-card-image-text h3{
@@ -2030,10 +2030,10 @@ p{
 }
 
 .expert-instructor .instructor-card .instructor-card-body:hover h3{
-    color: #00aeff;
+    color: #0C6AB4;
 }
 .expert-instructor .instructor-card .instructor-card-body:hover p{
-    color: #00aeff;
+    color: #0C6AB4;
 }
 /* Frequently Asked Questions */
 .qustion .accordion-item {
@@ -2422,10 +2422,10 @@ p{
     transition: .5s;
   }
 .footer a:hover{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 .footer .copyright .footer-privacy a:hover{
-  color: #00aeff;
+  color: #0C6AB4;
 }
   .instructor-card-body:hover .icon  {
     -webkit-animation-name: zoomInDown;
@@ -2640,7 +2640,7 @@ p{
   margin-right: 5px;
 }
 .grid-view-body .courses-card .courses-text .review-icon span{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
   text-decoration: none;
   display: flex;
@@ -2718,7 +2718,7 @@ p{
 }
 .course-category h3::after{
   content: "";
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   height: 2px;
   width: 50%;
   position: absolute;
@@ -2792,7 +2792,7 @@ p{
 	font-weight: 500;
 }
  .pagenation .active{
-    background-color: #00aeff;
+    background-color: #0C6AB4;
     color: #fff;
 }
 .page-item:last-child .page-link,
@@ -3004,7 +3004,7 @@ margin-right: 8px;
   font-size: 13px;
 }
 .ac-lecture li a span i {
-	color: #00aeff;
+	color: #0C6AB4;
 	font-size: 15px;
   margin-right: 14px;
 }
@@ -3209,7 +3209,7 @@ margin-right: 8px;
 }
 .accordion-body-2 .accordion-body-video .icon i{
   color: #fff;
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   border-radius: 50%;
   padding: 8px 10px 9px 13px;
   font-size: 16px;
@@ -3240,10 +3240,10 @@ margin-right: 8px;
   transition: .5s;
 }
 .accordion-body-2 .accordion-body-video h2 a:hover{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 .accordion-body-2 .accordion-time h2:hover{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 /* Instructor */
 .instructor .instructor-img img{
@@ -3282,7 +3282,7 @@ margin-right: 8px;
   margin: 5px;
 }
 .instructor .instructor-icon i:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
 }
 .instructor-student-feed-back{
@@ -3568,7 +3568,7 @@ course Page 3
   transition: .5s;
 }
 .c-d-3-banner .card-video-icon i:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
 }
 
 .cose-p-3-r .course-card  .ammount .h3-price{
@@ -3591,7 +3591,7 @@ course Page 3
   font-weight: 500;
 }
 .include-icon i{
-  color: #00aeff;
+  color: #0C6AB4;
   font-size: 20px;
   margin-right: 12px;
 }
@@ -3637,7 +3637,7 @@ Error Page
 .error-body-text a{
   text-decoration: none;
   color: #fff;
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -3772,7 +3772,7 @@ Trams & condition
   display: ruby;
 }
 .blog-body .left-tag a:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
 }
 
@@ -3807,7 +3807,7 @@ Trams & condition
   margin-top: 22px;
 }
 .comment #phone:hover {
-  border-color: #00aeff;
+  border-color: #0C6AB4;
 }
 .comment .checkbox{
   display: flex;
@@ -3942,7 +3942,7 @@ Trams & condition
   transition: .5s;
 }
 .blog-body .right-section .right-tag a:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
 }
 .blog-body .right-section .right-tag {
@@ -3966,7 +3966,7 @@ Sign Up Page
   margin-bottom: 16px;
 }
 .sing-up-right h3 span{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 .sing-up-right p{
   margin-bottom: 51px;
@@ -4813,9 +4813,9 @@ tbody, td, tfoot, th, thead, tr:last-child{
   margin-top: 15px;
 }
  .purchase-btn:hover{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   color: #fff;
-  border-color: #00aeff;
+  border-color: #0C6AB4;
 }
  .purchase-btn:hover a{
   color: #fff;
@@ -5055,7 +5055,7 @@ tbody, td, tfoot, th, thead, tr:last-child{
 .faq .faq-accrodion .faq-acc-heading h4{
   font-size: 18px;
   font-weight: 500;
-  color: #00aeff;
+  color: #0C6AB4;
   margin-bottom: 16px;
 }
 .faq .faq-accrodion .faq-acc-heading h1{
@@ -5287,7 +5287,7 @@ Price Page start
 }
 
 .form-section #exampleFormControlInput1:focus-visible {
-  border-color: #00aeff;
+  border-color: #0C6AB4;
 }
 .form-section .comment .form-control{
   height: 211px;
@@ -5903,7 +5903,7 @@ Price Page start
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   padding: 14px 34px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -6084,7 +6084,7 @@ Course play page
 }
 .course-play-body .course-play-left-body .body-1 a:hover{
   color: #fff;
-  background-color:  #00aeff;
+  background-color:  #0C6AB4;
 }
 .course-play-body .course-play-left-body .body-1{
   border-bottom: 1.5px solid #6e798a40;
@@ -6111,7 +6111,7 @@ Course play page
 
 }
 .course-play-body .course-play-left-body .video .card-video-icon{
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   padding: 3px 9px;
   border-radius: 50%;
   color: #fff;
@@ -6125,11 +6125,11 @@ Course play page
   padding: 5px 10px;
 }
 .course-play-body .course-play-left-body .video p a{
-  color: #00aeff;
+  color: #0C6AB4;
   
 }
 .course-play-body .course-play-left-body .body-1 p a:hover{
-  color: #00aeff;
+  color: #0C6AB4;
 }
 .course-play-right .course-play-video img{
   width: 100%;
@@ -6230,14 +6230,14 @@ Course play page
   color: var(--bs-nav-tabs-link-active-color);
   background-color: var(--bs-nav-tabs-link-active-bg);
   border-color: #fff;
-  border-bottom: 1.5px solid#00aeff;
-  color: #00aeff;
+  border-bottom: 1.5px solid#0C6AB4;
+  color: #0C6AB4;
  
 }
 .course-play-tab .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
   isolation: none;
   border-color: #fff;
-  border-bottom:  1.5px solid#00aeff;
+  border-bottom:  1.5px solid#0C6AB4;
   cursor: pointer;
 }
 .course-play-tab .nav-tabs {
@@ -6289,12 +6289,12 @@ Course play page
 }
 .course-play-tab .like p{
   margin: 0;
-  color: #00aeff;
+  color: #0C6AB4;
   font-size: 13;
   font-weight: 500;
 }
 .course-play-tab .like button{
-  color: #00aeff;
+  color: #0C6AB4;
   font-size: 13;
   font-weight: 500;
   text-decoration: none;
@@ -8196,7 +8196,7 @@ display: none;
   position: absolute;
   width: 1.5px;
   height: 30px;
-  background-color: #00aeff58;
+  background-color: #0C6AB458;
   left: 5px;
   top: 8px;
 }
@@ -8206,7 +8206,7 @@ display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #00aeff;
+  background-color: #0C6AB4;
   left: 0;
   top: 6px;
 }
@@ -8669,7 +8669,7 @@ display: none;
   width: 100%;
   max-width: 90px;
   height: 3px;
-  background: #00aeff;
+  background: #0C6AB4;
 }
 .speech-item-content .inner .info {
   font-size: 15px;

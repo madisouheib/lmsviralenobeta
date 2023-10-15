@@ -66,19 +66,21 @@
               <li>
              <div class="wisth_tgl_div">
           <div class="wisth_tgl_2div">
-            <a class="menu_pro_cart_tgl mt-1"
-              ><i class="fa-solid fa-cart-shopping" style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?>"></i>
-
-              <?php if(count($cart_items) > 0): ?>
-                <p class="menu_number" id="cartItemsCounter"><?php echo count($cart_items); ?></p>
-              <?php endif; ?>
-            </a>
+            <div class="row">
+          <a class="menu_pro_cart_tgl mt-1">
+  <i class="fa-solid fa-cart-shopping" style="<?php echo $page_name === 'home' ? 'color:#003666;' : ''; ?> vertical-align: middle;"></i>
+  <?php if(count($cart_items) > 0): ?>
+    <p class="menu_number" id="cartItemsCounter" style="display: inline-block; vertical-align: middle;"><?php echo count($cart_items); ?></p>
+  <?php endif; ?>
+</a>
+                 </div>
             <div class="menu_pro_wish">
               <div class="overflow-control" id="cartItems">
 
                 <?php include "cart_items.php"; ?>
 
               </div>
+
               <div class="menu_pro_btn">
                 <a href="<?php echo site_url('home/shopping_cart'); ?>" type="submit" class="btn btn-primary text-white"><?php echo get_phrase('Checkout'); ?></a>
               </div>

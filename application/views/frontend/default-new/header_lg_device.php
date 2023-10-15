@@ -67,7 +67,7 @@
                                  </li>
                                  
                                  <li >
-                                    <a class="custom-link" href="#" style="" >التسوق</a>
+                                    <a class="custom-link" href="<?php echo base_url('ebook') ?> " style="" > مكتبة </a>
                                    
                                  </li>
                                  
@@ -118,7 +118,7 @@
         </li>
       </ul>
 
-      <?php if(addon_status('ebook')): ?>
+      <?php /* if(addon_status('ebook')): ?>
         <ul class="navbar-nav main-nav-wrap mb-2 mb-lg-0 ms-2">
           <li class="nav-item">
             <a class="nav-link header-dropdown bg-white text-dark fw-600 text-nowrap" style="<?php echo $page_name === 'home' ? 'color:#003666;font-weight: bold;' : ''; ?>" href="#" id="navbarDropdown1">
@@ -137,7 +137,7 @@
             </ul>
           </li>
         </ul>
-      <?php endif; ?>
+      <?php endif; */ ?>
 
       <?php if(addon_status('course_bundle')): ?>
         <ul class="navbar-nav main-nav-wrap mb-2 mb-lg-0 ms-2">

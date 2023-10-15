@@ -266,7 +266,7 @@ select:visited {
   transition: all 0.3s;
 }
 .course-content-items .item.active {
-  background-color: #754ffe;
+  background-color: #0c6ab4;
 }
 .course-content-items .item.active .left .icon {
   background-color: #fff;

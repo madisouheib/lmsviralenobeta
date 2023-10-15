@@ -6,7 +6,7 @@ body {
   padding: 0;
   overflow-x: hidden;
     font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
-
+direction: rtl;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -22,6 +22,11 @@ body {
 }
 .course-playing .row {
   row-gap: toRem(30);
+}
+span {
+
+      font-family: 'IBM Plex Sans Arabic', sans-serif !important ;
+
 }
 
 h1,
@@ -68,6 +73,9 @@ img {
 
 button {
   cursor: pointer;
+}
+.fa-file-video:before {
+  margin-left: 5px;
 }
 
 .form-control:focus,
@@ -142,6 +150,7 @@ select:visited {
   line-height: 28px;
   color: #0a192e;
   padding-bottom: 20px;
+  float:right;
 }
 .course-playing-content .content .cp-info {
   font-size: 15px;

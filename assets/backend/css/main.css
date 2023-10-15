@@ -533,12 +533,13 @@ body {
 }
 
 .modal-body .alert {
-  float: right;
+
 }
 .modal-body .form-group label {
 
   float:right;
-  
+  margin-right: -5px;
+
 }
 .text-muted {
 

@@ -59,7 +59,7 @@ $sections = $this->crud_model->get_section('course', $param2)->result_array();
     <?php if ($param3 == 'iframe'): include('iframe_type_lesson_add.php'); endif; ?>
 
     <div class="form-group">
-        <label><?php echo get_phrase('summary'); ?></label>
+        <label><?php echo get_phrase('summary'); ?></label> <br/>
         <textarea name="summary" id="lesson_summary" class="form-control"></textarea>
     </div>
 

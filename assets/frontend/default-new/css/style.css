@@ -2241,12 +2241,12 @@ p{
     background-color: var(--bg-white);
 }
   .student .student-body-1{
-    background-image: url("../image/student-tasjil.png");
+    background-image: url("../image/p4.png");
     background-size: cover;
     border-radius: 7px;
   }
   .student .student-body-2{
-    background-image: url("../image/charika-tasjil.png");
+    background-image: url("../image/p5.png");
     background-size: cover;
     border-radius: 15px;
   }

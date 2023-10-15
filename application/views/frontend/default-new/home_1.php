@@ -68,7 +68,7 @@
  <div class="col-lg-12 col-12">
  
             
-            <img style="display: block; margin: auto;" src="<?php echo base_url('uploads/images/aboutus.jpg'); ?>">
+            <img style="display: block; margin: auto;height:400px; " src="<?php echo base_url('uploads/images/aboutus.png'); ?>">
             
 
 

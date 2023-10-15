@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact-image">
-                    <img src="<?php echo site_url('assets/frontend/default-new/'); ?>image/contact-img.png">
+                    <img src="<?php echo site_url('assets/frontend/default-new/'); ?>image/contact-nm.png">
                 </div>
                 <div class="office-time">
                     <?php
@@ -30,20 +30,20 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                             <div class="office-hour mb-4" style="font-size:14px; font-weight:400;">
-                                <div class="icon">
+                                <div class="icon" style="margin-left:10px;">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="office-hour-text">
-                                    <h4><?php echo get_phrase('Email'); ?></h4>
+                                    <h4 style="font-size:18px;"><?php echo get_phrase('Email'); ?></h4>
                                     <?php echo nl2br($contact_info['email']); ?>
                                 </div>
                             </div>
                             <div class="office-hour mb-4" style="font-size:14px; font-weight:400;">
-                                <div class="icon">
+                                <div class="icon" style="margin-left:10px;">
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="office-hour-text">
-                                    <h4><?php echo get_phrase('Get In Touch'); ?></h4>
+                                    <h4 style="font-size:18px;" ><?php echo get_phrase('Get In Touch'); ?></h4>
                                     <?php echo nl2br($contact_info['phone']); ?>
                                 </div>
                             </div>
@@ -51,20 +51,20 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                             <div class="office-hour mb-4" style="font-size:14px; font-weight:400;">
-                                <div class="icon">
+                                <div class="icon" style="margin-left:10px;" >
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="office-hour-text">
-                                    <h4><?php echo get_phrase('Our Address'); ?></h4>
+                                    <h4 style="font-size:18px;" ><?php echo get_phrase('Our Address'); ?></h4>
                                     <?php echo nl2br($contact_info['address']); ?>
                                 </div>
                             </div>
                             <div class="office-hour mb-4" style="font-size:14px; font-weight:400;">
-                                <div class="icon">
+                                <div class="icon" style="margin-left:10px;" >
                                     <i class="fa-solid fa-house"></i>
                                 </div>
                                 <div class="office-hour-text">
-                                    <h4><?php echo get_phrase('Office Hours'); ?></h4>
+                                    <h4 style="font-size:18px;" ><?php echo get_phrase('Office Hours'); ?></h4>
                                     <?php echo nl2br($contact_info['office_hours']); ?>
                                 </div>
                             </div>
@@ -110,10 +110,11 @@
                               </div>
                               <div class="cheack-box">
                                 <div class="form-check">
-                                    <input name="i_agree" class="form-check-input" type="checkbox" value="1" id="i_agree">
+                               
                                     <label class="form-check-label" for="i_agree"> 
                                         <p><?php echo get_phrase('I agree that my submitted data is being collected and stored.'); ?></p>
                                     </label>
+                                         <input name="i_agree" class="form-check-input" type="checkbox" value="1" id="i_agree">
                                   </div>                                  
                               </div>
                               <?php if(get_frontend_settings('recaptcha_status')): ?>

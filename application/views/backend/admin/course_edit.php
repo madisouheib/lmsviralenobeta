@@ -25,9 +25,9 @@ $course_details = $this->crud_model->get_course_by_id($course_id)->row_array();
                         <h4 class="header-title my-1"><?php echo get_phrase('course_manager'); ?></h4>
                     </div>
                     <div class="col-md-6">
-                        <a href="<?php echo site_url('admin/preview/' . $course_id); ?>" class="alignToTitle btn btn-outline-secondary btn-rounded btn-sm ml-1 my-1" target="_blank"><?php echo get_phrase('view_on_frontend'); ?> <i class="mdi mdi-arrow-right"></i> </a>
+                        <a href="<?php echo site_url('admin/preview/' . $course_id); ?>" class=" btn btn-outline-secondary btn-rounded btn-sm ml-1 my-1" target="_blank"><?php echo get_phrase('view_on_frontend'); ?> <i class="mdi mdi-arrow-right"></i> </a>
 
-                        <a href="<?php echo site_url('admin/courses'); ?>" class="alignToTitle btn btn-outline-secondary btn-rounded btn-sm my-1"> <i class=" mdi mdi-keyboard-backspace"></i> <?php echo get_phrase('back_to_course_list'); ?></a>
+                        <a href="<?php echo site_url('admin/courses'); ?>" class=" btn btn-outline-secondary btn-rounded btn-sm my-1"> <i class=" mdi mdi-keyboard-backspace"></i> <?php echo get_phrase('back_to_course_list'); ?></a>
                     </div>
                 </div>
 

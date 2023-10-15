@@ -55,7 +55,7 @@
 " >
                               <ul class="navbar-nav main-nav-wrap">
                                  <li class="nav-item">
-                                    <a class="custom-link"  href="<?php echo base_url('page/about') ?>" style="" >من نحن</a>
+                                    <a class="custom-link"  href="<?php echo base_url('home/about_us') ?>" style="" >من نحن</a>
                                    
                                  </li>
                                  
@@ -77,7 +77,7 @@
                                  </li>
                                  
                                  <li>
-                                     <a class="custom-link" href="<?php echo base_url('home/about_us') ?>" style="" >تواصل معنا</a>
+                                     <a class="custom-link" href="<?php echo base_url('home/contact_us') ?>" style="" >تواصل معنا</a>
                                  </li>
                               </ul>
                            </nav>

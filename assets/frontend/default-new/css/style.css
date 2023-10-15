@@ -1518,7 +1518,7 @@ p{
      * Adding image to the background
      * No relation to the hover effect.
      */
-   background-image: url("../home.png");
+   background-image: url("../image/h-banner-img.png");
    border-radius: 10px;
    background-size: 100%;
    background-repeat: no-repeat;

@@ -1165,7 +1165,7 @@ p{
 .h-1-banner .h-1-banner-text p{
     font-weight: 400;
 
-    line-height: 1.9;
+    line-height: 1;
     margin-bottom: 50px;
 }
 
@@ -3963,6 +3963,7 @@ Sign Up Page
 .sing-up-right h3{
   font-size: 34px;
   font-weight: 700;
+  color:##003666;
   margin-bottom: 16px;
 }
 .sing-up-right h3 span{
@@ -3971,6 +3972,7 @@ Sign Up Page
 .sing-up-right p{
   margin-bottom: 51px;
   word-spacing: 1.5px;
+    color:##003666;
 }
 .sing-up-right  h5{
   font-size: 16px;

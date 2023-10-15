@@ -24,7 +24,7 @@
                     </h1>
                     <p style="color:#003666;font-size: 20px;"><?php echo site_phrase(get_frontend_settings('banner_sub_title')); ?></p>
 
-                    <a class="btn btn-primary"> ابدأ الآن </a>
+                    <a  href="<?php echo site_url('sign_up'); ?>" class="btn btn-primary"> سجل الآن </a>
                 </div>
             
                 
@@ -57,7 +57,7 @@
 <h1 class="text-center" style="color:#524646;">  من نحن ؟ </h1>        
 </div>
  <div class="col-lg-12 col-12">
-<p style="font-size:18px;font-weight: 500; text-align:center;">
+<p style="font-size:18px;font-weight: 500; text-align:center;color:#0C6AB4;">
 
 "المركز الوطني لتدريب البحري هو منصة تعليمية رائدة تهدف إلى توفير التدريب والتعليم في مجال البحرية والقوارب. تم تصميم المنصة لتزويد الأفراد بفرصة فريدة لاكتساب المعرفة والمهارات اللازمة لقيادة وإدارة القوارب بفعالية وبأمان.
 

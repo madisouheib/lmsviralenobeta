@@ -430,10 +430,10 @@
 
                                 <ul class="list-inline mb-0 wizard text-center">
                                     <li class="previous list-inline-item">
-                                        <a href="javascript:;" class="btn btn-info"><i class="mdi mdi-arrow-right-bold"></i>  التالي</a>
+                                        <a href="javascript:;" class="btn btn-info"><i class="mdi mdi-arrow-right-bold"></i>  السابق    </a>
                                     </li>
                                     <li class="next list-inline-item">
-                                        <a href="javascript:;" class="btn btn-info"> السابق  <i class="mdi mdi-arrow-left-bold"></i> </a>
+                                        <a href="javascript:;" class="btn btn-info">التالي <i class="mdi mdi-arrow-left-bold"></i> </a>
                                     </li>
                                 </ul>
 

@@ -2241,12 +2241,12 @@ p{
     background-color: var(--bg-white);
 }
   .student .student-body-1{
-    background-image: url("../image/charika.png");
+    background-image: url("../image/student.png");
     background-size: cover;
     border-radius: 7px;
   }
   .student .student-body-2{
-    background-image: url("../image/student.png");
+    background-image: url("../image/charika.png");
     background-size: cover;
     border-radius: 15px;
   }

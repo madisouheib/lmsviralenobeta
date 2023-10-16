@@ -393,7 +393,7 @@
 
 <!---------  Expert blogs Start ---------------->
 
-<
+
 <!---------  END Instructor Start ---------------->
 
 
@@ -443,7 +443,10 @@
 </section>
 <!---------- Questions Section End  -------------->
 <?php endif; ?>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=1212121212&text=عند سؤال أو استفسار.؟." class="floatwp" target="_blank">
+<i class="fa fa-whatsapp my-floatwp"></i>
+</a>
 
 <!------------- Blog Section Start ------------>
 

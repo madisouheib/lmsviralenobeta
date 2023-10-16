@@ -77,10 +77,6 @@
                             <input type="text" name = "vimeo_api_key" id = "vimeo_api_key" class="form-control" value="<?php echo get_settings('vimeo_api_key');  ?>" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="purchase_code"><?php echo get_phrase('purchase_code'); ?><span class="required">*</span></label>
-                            <input type="text" name = "purchase_code" id = "purchase_code" class="form-control" value="<?php echo get_settings('purchase_code');  ?>" required>
-                        </div>
 
                         <div class="form-group">
                             <label for="language"><?php echo get_phrase('system_language'); ?></label>

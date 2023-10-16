@@ -29,16 +29,15 @@
 } ?>
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container" style="background-color: #f7faff; border-radius: 20px;" >
-    <a class="navbar-brand logo" href="<?php echo site_url(); ?>">
+    <a class="navbar-brand logo d-none d-md-block" href="<?php echo site_url(); ?>">
       <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" style="height: 90px;" alt="" />
     </a>
     <!-- Mobile Offcanves  Icon Show -->
     <ul class="menu-offcanves">
       <li>
-        <div class="search-item">
-          <span class="m-cross-icon"><i class="fa-solid fa-xmark"></i></span>
-          <span class="m-search-icon"> <i class="fa-solid fa-magnifying-glass"></i></span>
-        </div>
+     <a class="navbar-brand logo" href="<?php echo site_url(); ?>">
+      <img src="<?php echo site_url('uploads/system/'.get_frontend_settings('dark_logo')) ?>" style="height: 90px;" alt="" />
+    </a>
       </li>
       <li>
         <a href="#" class="btn-bar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-sharp fa-solid fa-bars"></i></a>

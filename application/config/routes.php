@@ -86,6 +86,8 @@ $route['blogs/(:any)'] = "blog/blogs/$1";
 $route['page/(:any)'] = "page/index/$1";
 //End Custom page
 
+
+$route['reservation'] = "home/reservation";
 //tutor booking ..... tutor_booking/tutors
 $route['tutors'] = "addons/tutor_booking/list_of_tuitions";
 $route['tutors/(:any)'] = "addons/tutor_booking/list_of_tuitions/$1";

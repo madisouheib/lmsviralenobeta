@@ -70,6 +70,8 @@
                                    
                                  </li>
                                  
+                           
+                                 
                                  <li >
                                     <a class="custom-link" href="#" style="">الاعتمادات</a>
                                 
@@ -107,10 +109,17 @@
                 </ul>
               </li>
             <?php endforeach; ?>
-            <li>
-              <a href="<?php echo site_url('home/courses'); ?>">
+            <li >
+              <a  href="<?php echo site_url('home/courses'); ?>">
                 <i class="fas fa-list-ul px-2"></i>
                 <?php echo get_phrase('All Courses'); ?>    
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"  href="<?php echo site_url('reservation'); ?>">
+                <i class="fas fa-calendar-alt"></i>
+   حجز دورة عملية  
               </a>
             </li>
           </ul>

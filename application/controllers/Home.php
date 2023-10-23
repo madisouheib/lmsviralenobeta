@@ -56,6 +56,13 @@ class Home extends CI_Controller
         $this->load->view('frontend/' . get_frontend_settings('theme') . '/index', $page_data);
     }
 
+    public function aboutus(){
+
+            $page_data['page_name'] = "aboutus";
+        $page_data['page_title'] = site_phrase('aboutus');
+        $this->load->view('frontend/' . get_frontend_settings('theme') . '/index', $page_data);
+    }
+
     //send gift
     public function shopping_cart($gift_status = "")
     {

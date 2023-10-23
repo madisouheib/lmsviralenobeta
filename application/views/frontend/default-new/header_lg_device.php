@@ -54,7 +54,7 @@
 " >
                               <ul class="navbar-nav main-nav-wrap">
                                  <li class="nav-item">
-                                    <a class="custom-link"  href="<?php echo base_url('home/about_us') ?>" style="" >من نحن</a>
+                                    <a class="custom-link"  href="<?php echo base_url('aboutus') ?>" style="" >من نحن</a>
                                    
                                  </li>
                                  

@@ -88,6 +88,7 @@ $route['page/(:any)'] = "page/index/$1";
 
 
 $route['reservation'] = "home/reservation";
+$route['aboutus'] = "home/aboutus";
 //tutor booking ..... tutor_booking/tutors
 $route['tutors'] = "addons/tutor_booking/list_of_tuitions";
 $route['tutors/(:any)'] = "addons/tutor_booking/list_of_tuitions/$1";

@@ -67,6 +67,25 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-6">
+                                        <label class="text-dark fw-600" for="FristName">تاريخ الميلاد </label>
+                                        <div class="input-group">
+                  
+                                            <input type="date" value="1999-02-02" class="form-control bg-white-2 text-14px" name="first_name" id="FristName" placeholder="<?php echo site_phrase('first_name'); ?>" value="<?php echo $user_details['first_name']; ?>">
+                                                                      <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label class="text-dark fw-600" for="FristName">رقم الهوية</label>
+                                        <div class="input-group">
+                  
+                                            <input type="text" disabled class="form-control bg-white-2 text-14px" value="2323948237" name="first_name" id="FristName" placeholder="<?php echo site_phrase('first_name'); ?>" value="<?php echo $user_details['first_name']; ?>">
+                                                                      <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                                        </div>
+                                    </div>
+
                                     <div class="col-12 mt-3">
                                         <?php if ($user_details['is_instructor'] > 0) : ?>
                                             <div class="form-group mb-3">
@@ -83,10 +102,13 @@
                                         <?php endif; ?>
 
                                         <div class="form-group">
-                                            <label class="text-dark fw-600" for="Biography"><?php echo site_phrase('biography'); ?></label>
+                                            <label class="text-dark fw-600" for="Biography"> خبرتي</label>
                                             <textarea class="form-control bg-white-2 text-14px text_editor" name="biography" id="Biography"><?php echo $user_details['biography']; ?></textarea>
                                         </div>
+                                        <div class="col-4">
+                                        <button class="btn btn-danger mt-2"> تحميل ملفات السيرة الذاتية <i class="fas fa-file-pdf"></i></button>
 
+                                        </div>
                                         <hr class="my-5 bg-secondary">
 
                                         <label class="text-dark fw-600"><?php echo site_phrase('add_your_twitter_link'); ?></label>

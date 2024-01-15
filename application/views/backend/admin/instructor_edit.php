@@ -96,8 +96,12 @@
                                             <div class="col-md-9">
                                                 <textarea name="biography" id = "summernote-basic" class="form-control"><?php echo $user_data['biography']; ?></textarea>
                                             </div>
-                                        </div>
+                                   
+                                        <button class="btn btn-danger mt-2"> تحميل ملفات السيرة الذاتية <i class="fas fa-file-pdf"></i></button>
 
+                                  
+                                        </div>
+                                      
                                         <div class="form-group row mb-3">
                                             <label class="col-md-3 col-form-label" for="phone"><?php echo get_phrase('Phone'); ?></label>
                                             <div class="col-md-9">

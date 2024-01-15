@@ -8,7 +8,25 @@
         <div class="row">
               <div class="col-lg-5 col-md-6 col-sm-12 col-12 ">
                 <div class="sing-up-right">
-                    <h3><?php echo get_phrase('Sign Up'); ?><span>!</span></h3>
+                    <h3><?php
+                    
+                    
+                    if (isset($_GET['instructor']) && $_GET['instructor'] == 'yes') {
+                        // The 'instructor' key exists in the $_GET array and its value is 'yes'
+                        // Your code for this condition goes here
+                        echo 'التسجيل كمدرب';
+                    } else {
+                        // The 'instructor' key does not exist or its value is not 'yes'
+                        // Code for the else condition goes here
+                        echo get_phrase('Sign Up');
+                    }
+                    
+                    
+            ?>
+                    
+                    
+                    
+                    <span>!</span></h3>
                     <p><?php echo get_phrase('Explore, learn, and grow with us. Enjoy a seamless and enriching educational journey. Lets begin!') ?></p>
 
                     <form action="<?php echo site_url('login/register') ?>" method="post" enctype="multipart/form-data">
@@ -34,6 +52,20 @@
                             </div>
                         </div>
                         <div class="mb-4">
+                            <h5> رقم الهوية</h5>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-id-card"></i>
+                                <input class="form-control" id="identity" type="text" name="identity_number" placeholder="ادخل رقم الهوية" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h5>  تاريخ الميلاد </h5>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-calendar-alt"></i>
+                                <input class="form-control" id="identity" type="date" name="birthday" placeholder="ادخل تارخ الميلاد" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
                             <h5><?php echo get_phrase('Password') ?></h5>
                             <div class="position-relative">
                                 <i class="fa-solid fa-key"></i>
@@ -45,7 +77,7 @@
                         <?php if(get_settings('allow_instructor')): ?>
                             <div class="mb-4">
                                 <input id="instructor" type="checkbox" onchange="$('#become-instructor-fields').toggle()" name="instructor" value="yes" <?php echo isset($_GET['instructor']) ? 'checked':''; ?>>
-                                <label for="instructor"> التسجيل كشركة </label>
+                                <label for="instructor"> التسجيل كمدرب </label>
                             </div>
 
                             <div id="become-instructor-fields" class="<?php echo isset($_GET['instructor']) ?  '':'d-hidden'; ?>">

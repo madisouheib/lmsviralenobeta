@@ -55,14 +55,14 @@ $route['certificate/(:any)']        = "addons/certificate/generate_certificate/$
 
 //course bundles
 $route['course_bundles/(:any)']                                = "addons/course_bundles/index/$1";
-$route['course_bundles']                                    = "addons/course_bundles";
-$route['course_bundles/search/(:any)']                        = "addons/course_bundles/search/$1";
-$route['course_bundles/search/(:any)/(:any)']                = "addons/course_bundles/search/$1/$1";
-$route['bundle_details/(:any)/(:any)']                      = "addons/course_bundles/bundle_details/$1";
-$route['bundle_details/(:any)']                              = "addons/course_bundles/bundle_details/$1/$1";
-$route['course_bundles/buy/(:any)']                          = "addons/course_bundles/buy/$1";
+$route['course_bundles']                                       = "addons/course_bundles";
+$route['course_bundles/search/(:any)']                         = "addons/course_bundles/search/$1";
+$route['course_bundles/search/(:any)/(:any)']                  = "addons/course_bundles/search/$1/$1";
+$route['bundle_details/(:any)/(:any)']                         = "addons/course_bundles/bundle_details/$1";
+$route['bundle_details/(:any)']                                = "addons/course_bundles/bundle_details/$1/$1";
+$route['course_bundles/buy/(:any)']                            = "addons/course_bundles/buy/$1";
 $route['home/my_bundles']                                      = "addons/course_bundles/my_bundles";
-$route['home/bundle_invoice/(:any)']                          = "addons/course_bundles/invoice/$1";
+$route['home/bundle_invoice/(:any)']                           = "addons/course_bundles/invoice/$1";
 //end course bundles
 
 //ebook
@@ -89,6 +89,8 @@ $route['page/(:any)'] = "page/index/$1";
 
 $route['reservation'] = "home/reservation";
 $route['aboutus'] = "home/aboutus";
+
+$route['registerwizard'] = "home/registerwizard";
 //tutor booking ..... tutor_booking/tutors
 $route['tutors'] = "addons/tutor_booking/list_of_tuitions";
 $route['tutors/(:any)'] = "addons/tutor_booking/list_of_tuitions/$1";

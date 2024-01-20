@@ -52,6 +52,13 @@
                             </div>
                         </div>
                         <div class="mb-4">
+                                    <h5><?php echo get_phrase('Phone'); ?></h5>
+                                    <div class="position-relative">
+                                        <i class="fas fa-phone"></i>
+                                        <input class="form-control" id="phone" type="phone" name="phone" placeholder="<?php echo get_phrase('Enter your phone number'); ?>">
+                                    </div>
+                                </div>
+                        <div class="mb-4">
                             <h5> رقم الهوية</h5>
                             <div class="position-relative">
                                 <i class="fa-solid fa-id-card"></i>
@@ -81,13 +88,7 @@
                             </div>
 
                             <div id="become-instructor-fields" class="<?php echo isset($_GET['instructor']) ?  '':'d-hidden'; ?>">
-                                <div class="mb-4">
-                                    <h5><?php echo get_phrase('Phone'); ?></h5>
-                                    <div class="position-relative">
-                                        <i class="fas fa-phone"></i>
-                                        <input class="form-control" id="phone" type="phone" name="phone" placeholder="<?php echo get_phrase('Enter your phone number'); ?>">
-                                    </div>
-                                </div>
+                              
                                 <div class="mb-4">
                                     <h5><?php echo get_phrase('Document'); ?> <small>(doc, docs, pdf, txt, png, jpg, jpeg)</small></h5>
                                     <div class="position-relative">
@@ -103,13 +104,18 @@
                                 </div>
                             </div>
                         <?php endif; ?>
+                        <div class="mb-4">
+                                <input  type="checkbox"  name="insctructions" onchange="toggleButton()"  id="checkInstruction" value="yes" >
+                                <label for="instructor">  الموافقة على <a class="" href=""> شروط الاستخدام </a>   </label>
+                            </div>
+
 
                         <?php if(get_frontend_settings('recaptcha_status')): ?>
                             <div class="g-recaptcha" data-sitekey="<?php echo get_frontend_settings('recaptcha_sitekey'); ?>"></div>
                         <?php endif; ?>
                         
                         <div class="log-in">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary" id="signupButton" disabled >
                                 <?php echo get_phrase('Sign Up') ?>
                             </button>
                         </div>
@@ -139,3 +145,17 @@
         </div>
     </div>
 </section>
+
+<script>
+
+
+function toggleButton() {
+    var checkbox = document.getElementById('checkInstruction');
+    var button = document.getElementById('signupButton');
+    
+    // Enable the button if the checkbox is checked, disable otherwise
+    button.disabled = !checkbox.checked;
+}
+
+    
+</script>

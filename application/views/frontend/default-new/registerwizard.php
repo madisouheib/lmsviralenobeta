@@ -63,7 +63,7 @@
         <!-- Company Card -->
         <div class="col-md-4">
         <div class="center-content">
-            <a href="#companyLink" >
+            <a href="sign_up?company=yes" >
                 <div class="card">
                     <div class="card-body text-center">
                       <img style="heigth:140px;width:140px;"  src="<?php echo site_url('assets/frontend/default-new/pics/'); ?>batiments.png">

@@ -44,6 +44,12 @@ class User_model extends CI_Model
             $data['first_name'] = html_escape($this->input->post('first_name'));
             $data['last_name'] = html_escape($this->input->post('last_name'));
             $data['email'] = html_escape($this->input->post('email'));
+            $data['identity'] = html_escape($this->input->post('identity'));
+            $data['birthday'] = html_escape($this->input->post('birthday'));
+            if($this->input->post('company_role') == true){
+            $data['company'] = html_escape($this->input->post('company'));
+            }
+            
             $data['password'] = sha1(html_escape($this->input->post('password')));
             $social_link['facebook'] = html_escape($this->input->post('facebook_link'));
             $social_link['twitter'] = html_escape($this->input->post('twitter_link'));
@@ -57,7 +63,14 @@ class User_model extends CI_Model
                 $data['role_id'] = 1;
                 $data['is_instructor'] = 1;
             } else {
-                $data['role_id'] = 2;
+                if($this->input->post('special_role') == true){
+
+                    $data['role_id'] = 5;
+                }else {
+                    $data['role_id'] = 2;
+
+                }
+     
             }
 
             $data['date_added'] = strtotime(date("Y-m-d H:i:s"));

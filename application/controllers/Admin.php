@@ -1169,6 +1169,7 @@ class Admin extends CI_Controller
             $page_data['categories'] = $this->crud_model->get_categories();
             $page_data['page_name'] = 'course_add';
             $page_data['page_title'] = get_phrase('add_course');
+            
             $this->load->view('backend/index', $page_data);
         } elseif ($param1 == 'add_course_shortcut') {
             $page_data['languages'] = $this->crud_model->get_all_languages();

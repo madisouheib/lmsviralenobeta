@@ -18,7 +18,17 @@
                     } else {
                         // The 'instructor' key does not exist or its value is not 'yes'
                         // Code for the else condition goes here
-                        echo get_phrase('Sign Up');
+                
+
+if (isset($_GET['company']) && $_GET['company'] == 'yes') {
+
+    echo 'التسجيل كشركة';
+
+}else {
+
+    echo get_phrase('Sign Up');
+}
+                 
                     }
                     
                     
@@ -62,7 +72,7 @@
                             <h5> رقم الهوية</h5>
                             <div class="position-relative">
                                 <i class="fa-solid fa-id-card"></i>
-                                <input class="form-control" id="identity" type="text" name="identity_number" placeholder="ادخل رقم الهوية" required>
+                                <input class="form-control" id="identity" type="text" name="identity" placeholder="ادخل رقم الهوية" required>
                             </div>
                         </div>
                         <div class="mb-4">
@@ -80,12 +90,25 @@
                                 <input class="form-control" id="password" type="password" name="password" placeholder="<?php echo get_phrase('Enter your valid password'); ?>" required>
                             </div>
                         </div>
+<?php 
 
-                        <?php if(get_settings('allow_instructor')): ?>
-                            <div class="mb-4">
-                                <input id="instructor" type="checkbox" onchange="$('#become-instructor-fields').toggle()" name="instructor" value="yes" <?php echo isset($_GET['instructor']) ? 'checked':''; ?>>
-                                <label for="instructor"> التسجيل كمدرب </label>
+if (isset($_GET['company']) && $_GET['company'] == 'yes') {
+
+
+
+?>  
+    <div class="mb-4">
+                            <h5>  اسم الشركة </h5>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-building"></i>
+                                <input class="form-control" id="building" type="text" name="company" placeholder="ادخل  اسم الشركة " required>
                             </div>
+                        </div>
+
+<?php  } 
+?>
+<?php if(get_settings('allow_instructor')): ?>
+                          
 
                             <div id="become-instructor-fields" class="<?php echo isset($_GET['instructor']) ?  '':'d-hidden'; ?>">
                               
@@ -139,7 +162,28 @@
                 </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
+            <?php 
+
+if (isset($_GET['company']) && $_GET['company'] == 'yes') {
+
+
+
+?>  
+
+<img   src="<?php echo site_url('assets/frontend/default-new/pics/'); ?>sailor.gif">
+<input name="company_role" value="true" type="hidden">
+<?php 
+
+}else {
+
+?>
+  
                 <img src="<?php echo site_url('assets/frontend/default-new/image/sailor.gif') ?>">
+
+                <?php 
+
+}
+?>
             </div>
           
         </div>

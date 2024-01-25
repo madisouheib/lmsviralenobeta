@@ -18,7 +18,7 @@
                     <?php endif; ?>
                     <li> <a href="<?php echo site_url('blog'); ?>"><?php echo site_phrase('blog'); ?></a></li>
                     <li><a href="<?php echo site_url('home/courses'); ?>"><?php echo site_phrase('all_courses'); ?></a></li>
-                    <li><a href="<?php echo site_url('sign_up'); ?>"><?php echo site_phrase('sign_up'); ?></a></li>
+                    <li><a href="registerwizard"><?php echo site_phrase('sign_up'); ?></a></li>
                     <?php $custom_page_menus = $this->crud_model->get_custom_pages('', 'footer'); ?>
                     <?php foreach($custom_page_menus->result_array() as $custom_page_menu): ?>
                       <li><a href="<?php echo site_url('page/'.$custom_page_menu['page_url']); ?>"><?php echo $custom_page_menu['button_title']; ?></a></li>

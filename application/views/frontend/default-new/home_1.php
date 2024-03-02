@@ -345,7 +345,7 @@
 
 <section class="student">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-6  <?php if (get_settings('allow_instructor') != 1) echo 'w-100'; ?>">
                 <div class="student-body-1">
                     <div class="row">
@@ -387,7 +387,7 @@
                 </div>
             <?php endif; ?>
             <div class="col-lg-6 ">
-                    <div class="student-body-3">
+                    <div class="student-body-3" style="margin-top:2%;">
                     <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8 col-8 ">
                                 <div class="student-body-text">

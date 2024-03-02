@@ -393,7 +393,7 @@
                                 <div class="student-body-text">
                                   <img src="<?php echo base_url('assets/frontend/default-new/image/2.png')?>">
                                     <h1> التسجيل كمدرب </h1>
-                                    <p><?php echo site_phrase('Teach_thousands_of_students_and_earn_money!')?> </p>
+                                    <p> التسجيل بعضوية مدرب </p>
                                     <?php if($this->session->userdata('user_id')): ?>
                                        <a  href="<?php echo site_url('user/become_an_instructor'); ?>"><?php echo site_phrase('join_now'); ?></a>
                                       <?php else: ?>

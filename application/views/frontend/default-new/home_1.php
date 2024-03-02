@@ -387,7 +387,7 @@
                 </div>
             <?php endif; ?>
             <div class="col-lg-6 ">
-                    <div class="student-body-3" style="margin-top:2%;">
+                    <div class="student-body-3" style="margin-top:4%;">
                     <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8 col-8 ">
                                 <div class="student-body-text">

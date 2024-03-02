@@ -113,7 +113,8 @@ if (isset($_GET['company']) && $_GET['company'] == 'yes') {
                             <div id="become-instructor-fields" class="<?php echo isset($_GET['instructor']) ?  '':'d-hidden'; ?>">
                               
                                 <div class="mb-4">
-                                    <h5><?php echo get_phrase('Document'); ?> <small>(doc, docs, pdf, txt, png, jpg, jpeg)</small></h5>
+                                    <h5><?php echo get_phrase('Document'); ?>  <small>(doc, docs, pdf, txt, png, jpg, jpeg)</small></h5>
+                                    <span class="text-center">  مثال سيرة الذاتية  شهادات </span>
                                     <div class="position-relative">
                                         <input class="form-control" id="document" type="file" name="document">
                                         <small><?php echo get_phrase('Provide some documents about your qualifications'); ?></small>

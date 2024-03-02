@@ -73,7 +73,7 @@
                            
                                  
                                  <li >
-                                    <a class="custom-link" href="#" style="">الاعتمادات</a>
+                                    <a class="custom-link" href="<?php echo base_url('certificates') ?>" style="">الاعتمادات</a>
                                 
                                  </li>
                                  

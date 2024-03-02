@@ -2250,6 +2250,11 @@ p{
     background-size: cover;
     border-radius: 15px;
   }
+  .student .student-body-3{
+    background-image: url("../image/modarib.png");
+    background-size: cover;
+    border-radius: 15px;
+  }
 
   .student h1{
     font-size: 24px;

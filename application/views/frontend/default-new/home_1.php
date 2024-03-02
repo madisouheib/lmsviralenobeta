@@ -386,6 +386,27 @@
                     </div> 
                 </div>
             <?php endif; ?>
+            <div class="col-lg-6 ">
+                    <div class="student-body-3">
+                    <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-8 ">
+                                <div class="student-body-text">
+                                  <img src="<?php echo base_url('assets/frontend/default-new/image/2.png')?>">
+                                    <h1> التسجيل كمدرب </h1>
+                                    <p><?php echo site_phrase('Teach_thousands_of_students_and_earn_money!')?> </p>
+                                    <?php if($this->session->userdata('user_id')): ?>
+                                       <a  href="<?php echo site_url('user/become_an_instructor'); ?>"><?php echo site_phrase('join_now'); ?></a>
+                                      <?php else: ?>
+                                        <a  href="<?php echo site_url('sign_up?instructor=yes'); ?>"><?php echo site_phrase('get_started'); ?></a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+  
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
         </div>
     </div>
 </section>
